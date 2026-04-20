@@ -1,0 +1,30 @@
+import type { Metadata } from "next";
+import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import { Header, Footer } from "./components/ui";
+import "./globals.css";
+
+const serif = DM_Serif_Display({ subsets: ["latin"], weight: "400", variable: "--font-serif" });
+const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
+
+export const metadata: Metadata = {
+  title: { default: "MEI/guia — Guia completo do MEI 2026", template: "%s | MEI/guia" },
+  description: "Guia completo e atualizado sobre MEI em 2026: como pagar o DAS, declarar o DASN-SIMEI, emitir nota fiscal e muito mais.",
+  alternates: { canonical: "https://guiamei.com.br" },
+  openGraph: {
+    siteName: "MEI/guia",
+    locale: "pt_BR",
+    type: "website",
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="pt-BR" className={`${serif.variable} ${sans.variable}`}>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
