@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import { Header, Footer } from "./components/ui";
+import { Analytics } from '@vercel/analytics/react';
+
 import "./globals.css";
 
 const serif = DM_Serif_Display({ subsets: ["latin"], weight: "400", variable: "--font-serif" });
@@ -14,6 +16,9 @@ export const metadata: Metadata = {
     siteName: "MEI/guia",
     locale: "pt_BR",
     type: "website",
+  },  
+  verification: {
+    google: 'Xt0jGkOLNmz6LL3vzFE469gsH4tmdH7JOYaZpnI92tg',
   },
 };
 
@@ -24,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

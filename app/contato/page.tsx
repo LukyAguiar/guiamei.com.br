@@ -16,7 +16,7 @@ export default function Page() {
       <div className="space-y-4">
         <div className="bg-white border border-[var(--border)] rounded-xl p-5">
           <p className="font-medium text-sm mb-1">📧 E-mail</p>
-          <p className="text-sm text-[var(--muted)]">contato@guiamei.com.br</p>
+          <p className="text-sm text-[var(--muted)]">lkprojects@outlook.com.br</p>
           <p className="text-xs text-[var(--muted)] mt-1">Respondemos em até 2 dias úteis.</p>
         </div>
 
