@@ -26,6 +26,39 @@ const satellites = [
   { href: "/mei-precisa-de-contador", title: "MEI precisa de contador?", desc: "Resposta honesta: quando vale a pena contratar", badge: "Dúvida" },
   { href: "/mei-pode-ter-funcionario", title: "MEI pode ter funcionário?", desc: "Limites, encargos e obrigações trabalhistas", badge: "RH" },
   { href: "/limite-mei-2026", title: "Limite do MEI em 2026", desc: "Faturamento máximo e o que fazer se ultrapassar", badge: "2026" },
+    { href: "/mei-como-emitir-nota-fiscal", title: "Como emitir nota fiscal sendo MEI", desc: "Passo a passo para emitir nota fiscal como microempreendedor", badge: "Nota fiscal" },
+  { href: "/mei-precisa-emitir-nota-fiscal", title: "MEI precisa emitir nota fiscal?", desc: "Descubra quando a emissão é obrigatória e quando não é", badge: "Obrigação" },
+  { href: "/como-emitir-nf-mei-prefeitura", title: "Como emitir NF MEI na prefeitura", desc: "Veja como funciona a emissão municipal da nota de serviço", badge: "Prefeitura" },
+
+  { href: "/mei-ultrapassou-limite-o-que-fazer", title: "MEI ultrapassou o limite: e agora?", desc: "Entenda os próximos passos e como regularizar a situação", badge: "Limite" },
+  { href: "/quanto-mei-pode-faturar-por-mes", title: "Quanto o MEI pode faturar por mês", desc: "Entenda o cálculo mensal e o limite anual permitido", badge: "Faturamento" },
+
+  { href: "/mei-irregular-como-regularizar", title: "MEI irregular: como regularizar", desc: "Veja como consultar pendências e voltar à regularidade", badge: "Regularização" },
+  { href: "/como-consultar-debitos-mei", title: "Como consultar débitos do MEI", desc: "Descubra se há pendências e como verificar valores em aberto", badge: "Débitos" },
+  { href: "/mei-inapto-o-que-significa", title: "MEI inapto: o que significa", desc: "Entenda as causas, os riscos e como resolver a situação", badge: "Situação" },
+
+  { href: "/golpe-das-mei-boleto-falso", title: "Golpe do DAS MEI e boleto falso", desc: "Aprenda a identificar cobranças falsas e evitar prejuízo", badge: "Segurança" },
+  { href: "/como-saber-se-o-das-e-falso", title: "Como saber se o DAS é falso", desc: "Confira os sinais de fraude antes de pagar qualquer guia", badge: "Alerta" },
+
+  { href: "/mei-pode-fazer-emprestimo", title: "MEI pode fazer empréstimo?", desc: "Veja quando vale a pena, requisitos e cuidados antes de contratar", badge: "Crédito" },
+  { href: "/mei-tem-direito-credito", title: "MEI tem direito a crédito?", desc: "Entenda linhas de crédito, análise e acesso ao financiamento", badge: "Financeiro" },
+  { href: "/cartao-para-mei-melhor-opcao", title: "Melhor cartão para MEI", desc: "Compare opções, taxas e benefícios para o seu negócio", badge: "Cartão" },
+  { href: "/mei-precisa-conta-pj", title: "MEI precisa de conta PJ?", desc: "Saiba se é obrigatório e quando separar finanças ajuda", badge: "Conta PJ" },
+  { href: "/melhores-contas-para-mei", title: "Melhores contas para MEI", desc: "Compare contas digitais e bancárias para pessoa jurídica", badge: "Bancos" },
+
+  { href: "/app-mei-como-usar", title: "Como usar o app MEI", desc: "App oficial, funções principais e primeiro acesso", badge: "Aplicativo" },
+  { href: "/emitir-das-pelo-celular", title: "Como emitir DAS pelo celular", desc: "Use o app e o site mobile para gerar e pagar a guia", badge: "Mobile" },
+  { href: "/como-pagar-das-automatico", title: "Como pagar DAS automaticamente", desc: "Veja como ativar pagamento recorrente e evitar atrasos", badge: "Automático" },
+  { href: "/mei-debito-automatico", title: "MEI no débito automático", desc: "Entenda como funciona, vantagens e pontos de atenção", badge: "Bancos" },
+
+  { href: "/guia-completo-mei-2026", title: "Guia completo do MEI 2026", desc: "Hub central com tudo sobre pagamento, nota, limite e obrigações", badge: "Hub" },
+  { href: "/tudo-sobre-mei", title: "Tudo sobre MEI", desc: "Guia definitivo do zero ao avançado para o microempreendedor", badge: "Completo" },
+
+  { href: "/calculadora-das-mei", title: "Calculadora DAS MEI", desc: "Simule atrasos, juros e o valor total da guia em aberto", badge: "Calculadora" },
+  { href: "/simulador-faturamento-mei", title: "Simulador de faturamento MEI", desc: "Calcule o limite proporcional conforme o mês de abertura", badge: "Simulador" },
+
+  { href: "/mei-ou-clt", title: "MEI ou CLT: qual vale mais a pena?", desc: "Compare custos, benefícios e renda líquida em cada modelo", badge: "Comparativo" },
+  { href: "/mei-ou-autonomo", title: "MEI ou autônomo", desc: "Diferenças, custos do informal e quando vale formalizar", badge: "Escolha" },
 ];
 
 const valores2026 = [
