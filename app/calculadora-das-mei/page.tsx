@@ -3,13 +3,11 @@
 import { useState } from "react";
 import type { Metadata } from "next";
 import { Badge, AlertBox, RelatedPages, InternalLink } from "../components/ui";
-
-// Metadata não funciona em client components — será exportada como layout separado
-// mas deixamos aqui para referência do conteúdo
+import Link from "next/link";
 
 const TAXA_MULTA_DIA = 0.0033;
 const MULTA_MAX = 0.20;
-const SELIC_MENSAL = 0.0107; // aproximado 2026
+const SELIC_MENSAL = 0.0107;
 
 function calcularDAS(valorBase: number, mesesAtraso: number) {
   if (mesesAtraso === 0) return { total: valorBase, multa: 0, juros: 0 };
@@ -47,14 +45,10 @@ export default function Page() {
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-6 pt-12 space-y-8">
-
-        {/* Calculadora */}
+      <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
         <section className="bg-white border border-[var(--border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-serif text-xl mb-6">Configure o cálculo</h2>
-
           <div className="space-y-6">
-            {/* Atividade */}
             <div>
               <label className="block text-sm font-semibold mb-2">Tipo de atividade</label>
               <div className="grid grid-cols-3 gap-2">
@@ -75,7 +69,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Meses de atraso */}
             <div>
               <label className="block text-sm font-semibold mb-2">
                 Meses em atraso: <span className="text-[var(--green)]">{meses} {meses === 1 ? "mês" : "meses"}</span>
@@ -97,7 +90,6 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Resultado */}
           <div className={`mt-6 rounded-2xl p-5 ${meses > 0 ? "bg-red-50 border-2 border-red-200" : "bg-[var(--green-light)] border-2 border-[#b2ddc4]"}`}>
             <p className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)] mb-3">
               {meses === 0 ? "Valor para pagamento em dia" : `Valor com ${meses} ${meses === 1 ? "mês" : "meses"} de atraso`}
@@ -128,14 +120,18 @@ export default function Page() {
               </div>
             </div>
             {meses > 0 && (
-              <p className="text-xs text-[var(--muted)] mt-3">* Valor estimado. O valor exato com juros Selic atualizados é calculado pelo portal PGMEI no momento da emissão do boleto.</p>
+              <p className="text-xs text-[var(--muted)] mt-3">
+                * Valor estimado. O valor oficial com multa e juros atualizados é calculado pelo portal PGMEI no momento da emissão do boleto. Veja como: <InternalLink href="/das-atrasado">como pagar o DAS atrasado</InternalLink>.
+              </p>
             )}
           </div>
         </section>
 
         <AlertBox type="warning">
           <p className="font-semibold mb-1">⚠️ Esta calculadora é uma estimativa</p>
-          <p className="text-sm">Para o valor oficial e exato com multa e juros atualizados, sempre gere o DAS pelo portal PGMEI da Receita Federal. O sistema oficial usa a taxa Selic diária atualizada. Veja como: <InternalLink href="/das-atrasado">como pagar o DAS atrasado</InternalLink>.</p>
+          <p className="text-sm">
+            Para o valor oficial e exato com multa e juros atualizados, sempre gere o DAS pelo portal PGMEI da Receita Federal. O sistema oficial usa a taxa Selic diária atualizada. Veja como: <InternalLink href="/das-atrasado">como pagar o DAS atrasado</InternalLink>.
+          </p>
         </AlertBox>
 
         <section aria-labelledby="tabela-title">
@@ -158,9 +154,8 @@ export default function Page() {
           </div>
         </section>
 
+        <RelatedPages current="/calculadora-das-mei" />
       </div>
-
-      <RelatedPages current="/calculadora-das-mei" />
     </main>
   );
 }
