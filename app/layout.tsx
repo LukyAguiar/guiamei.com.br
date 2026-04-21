@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   verification: {
     google: 'Xt0jGkOLNmz6LL3vzFE469gsH4tmdH7JOYaZpnI92tg',
   },
+    icons: {
+    icon: "/favicon-mei-2.ico",
+    shortcut: "/favicon-mei-2.ico",
+    apple: "/apple-touch-icon-2.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
