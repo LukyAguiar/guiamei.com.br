@@ -76,10 +76,10 @@ export default function Page() {
           <div className="space-y-2">
             <FaqItem q="O CNPJ cancelado pode ser recuperado?" a="Não diretamente. Após o cancelamento, você precisaria abrir um novo MEI (novo CNPJ). Por isso é tão importante regularizar antes de 12 meses de inadimplência." />
             <FaqItem q="Débito do MEI vai para o nome (CPF)?" a="Tecnicamente o MEI é uma pessoa jurídica, mas como o CPF do titular é vinculado ao CNPJ, débitos muito antigos inscritos na Dívida Ativa podem impactar o CPF." />
-            <FaqItem q="Posso fechar o MEI se tiver dívida?" a={<>Sim, mas as dívidas não são canceladas com o fechamento. Você pode dar baixa e ainda precisará quitar os débitos. Veja:{" "}<InternalLink href="/como-dar-baixa-no-mei">como dar baixa no MEI</InternalLink>.</>
+            <FaqItem q="Posso fechar o MEI se tiver dívida?" a={<>Sim, mas as dívidas não são canceladas com o fechamento. Você pode dar baixa e ainda precisará quitar os débitos. Veja:{" "}<InternalLink href="/como-dar-baixa-no-mei">como dar baixa no MEI</InternalLink>.</>} />
             <FaqItem q="Quantos meses atrasados causam cancelamento do MEI?" a="Após 12 meses consecutivos de inadimplência, a Receita Federal pode cancelar o CNPJ automaticamente." />
             <FaqItem q="DAS atrasado perde o INSS do mês?" a="Sim. Meses não pagos não contam para a aposentadoria." />
-            <FaqItem q="DAS atrasado gera multa de quanto?" a="Multa de 2% + 0,33% ao dia, limitada a 20%, mais juros Selic." />} />
+            <FaqItem q="DAS atrasado gera multa de quanto?" a="Multa de 2% + 0,33% ao dia, limitada a 20%, mais juros Selic." />
           </div>
         </section>
 
