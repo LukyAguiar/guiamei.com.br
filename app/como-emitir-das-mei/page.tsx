@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem, AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como emitir o DAS-MEI em 2026 — passo a passo",
+  title: "Como emitir o DAS-MEI em 2026 — passo a passo pelo celular ou PC",
   description: "Veja como gerar o boleto DAS do MEI pelo portal Gov.br, pelo app ou pelo banco. Passo a passo atualizado para 2026.",
+  alternates: { canonical: "https://guiamei.com.br/como-emitir-das-mei" },
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         {/* Intro */}
         <section>
@@ -75,6 +79,9 @@ export default function Page() {
           <p>Se o dia 20 cair em sábado, domingo ou feriado, o vencimento passa automaticamente para o próximo dia útil. Mesmo assim, o recomendado é pagar antes para evitar qualquer imprevisto bancário.</p>
         </AlertBox>
 
+        {/* AD MEIO */}
+        <AdSlot position="meio" />
+
         {/* Erros comuns */}
         <section aria-labelledby="erros-title">
           <h2 id="erros-title" className="font-serif text-2xl mb-4">Erros comuns ao emitir o DAS</h2>
@@ -105,14 +112,24 @@ export default function Page() {
             <FaqItem q="Posso emitir vários meses de uma vez?" a="Sim! O sistema PGMEI permite emitir um DAS por vez, mas você pode repetir o processo para cada mês em atraso. Para múltiplos meses atrasados, considere o parcelamento." />
             <FaqItem q="O DAS pago no banco demora para compensar?" a="Pagamentos via Pix são instantâneos. Boleto bancário pode levar até 2 dias úteis para compensar. Nunca pague no último dia com boleto." />
             <FaqItem q="Perdi o comprovante. Como reemitir?" a="Acesse o PGMEI com seu CNPJ e consulte o histórico de pagamentos. O sistema registra todos os pagamentos realizados." />
+            <FaqItem q="Como saber se o boleto DAS é verdadeiro?" a={<>O DAS só deve ser gerado pelo portal oficial pgmei.gov.br. Boletos enviados por e-mail ou WhatsApp podem ser falsos. Veja como identificar no guia <InternalLink href="/como-saber-se-o-das-e-falso">como saber se o DAS é falso</InternalLink>.</>} />
+            <FaqItem q="Posso configurar o DAS para pagar automaticamente?" a={<>Sim! É possível cadastrar débito automático no banco. Veja o passo a passo em <InternalLink href="/como-pagar-das-automatico">como pagar o DAS automaticamente</InternalLink>.</>} />
           </div>
         </section>
 
         {/* Interlinking */}
-        <AlertBox type="success">
-          <p className="font-semibold mb-1">📅 Está com o DAS atrasado?</p>
-          <p>Não entre em pânico. Veja nosso guia completo sobre{" "}<InternalLink href="/das-atrasado">o que fazer quando o DAS está atrasado</InternalLink>, incluindo como calcular multa e como parcelar.</p>
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Leituras relacionadas</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: o que fazer e como parcelar</InternalLink></li>
+            <li>→ <InternalLink href="/emitir-das-pelo-celular">Como emitir o DAS pelo celular</InternalLink></li>
+            <li>→ <InternalLink href="/mei-debito-automatico">MEI no débito automático</InternalLink></li>
+            <li>→ <InternalLink href="/golpe-das-mei-boleto-falso">Golpe do DAS MEI e boleto falso</InternalLink></li>
+          </ul>
         </AlertBox>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
 
       </div>
 

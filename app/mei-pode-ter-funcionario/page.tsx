@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, FaqItem , AdSlot , InternalLink } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI pode ter funcionário? Regras e obrigações em 2026",
+  title: "MEI pode ter funcionário em 2026? Limite, encargos e obrigações",
   description: "Saiba se o MEI pode contratar funcionário, quantos pode ter, quanto paga de encargos e quais são as obrigações trabalhistas.",
+  alternates: { canonical: "https://guiamei.com.br/mei-pode-ter-funcionario" }
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="success">
           <p className="font-semibold mb-1">✅ Resposta direta</p>
@@ -77,8 +81,25 @@ export default function Page() {
             <FaqItem q="Posso contratar funcionário como autônomo para não assinar carteira?" a="Juridicamente é possível em alguns casos, mas há riscos de reconhecimento de vínculo empregatício. Se o trabalhador tiver horário fixo, subordinação e salário regular, a Justiça do Trabalho pode considerar que é empregado — independente do contrato." />
             <FaqItem q="Posso ser sócio de outra empresa sendo MEI?" a="Não. O MEI não pode ser sócio, administrador ou titular de outra empresa. Se isso acontecer, o MEI perde o enquadramento automaticamente." />
             <FaqItem q="O funcionário do MEI tem os mesmos direitos que qualquer CLT?" a="Sim. Férias, 13º, FGTS, INSS, aviso prévio — todos os direitos trabalhistas se aplicam normalmente." />
+            <FaqItem q="Quantos funcionários o MEI pode ter?" a="O MEI pode ter apenas 1 funcionário contratado com carteira assinada." />
+            <FaqItem q="Quais encargos o MEI paga com funcionário?" a="O MEI paga 8% de FGTS + 3% de INSS patronal sobre o salário do empregado." />
+            <FaqItem q="O que acontece se o MEI tiver mais de 1 funcionário?" a="Isso descaracteriza o MEI e pode forçar migração para ME ou EPP, com carga tributária maior." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-de-contador">MEI precisa de contador?</InternalLink></li>
+            <li>→ <InternalLink href="/mei-ou-clt">MEI ou CLT: qual vale mais?</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

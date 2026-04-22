@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como emitir nota fiscal sendo MEI — NFS-e e NF-e passo a passo",
+  title: "Como emitir nota fiscal sendo MEI em 2026: passo a passo",
   description: "Aprenda como emitir nota fiscal sendo MEI em 2026: NFS-e pela prefeitura, NF-e para indústria e quando você é obrigado a emitir.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-como-emitir-nota-fiscal" },
+  alternates: { canonical: "https://guiamei.com.br/mei-como-emitir-nota-fiscal" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="info">
           <p className="font-semibold mb-1">📋 Qual tipo de nota fiscal o MEI emite?</p>
@@ -84,6 +87,20 @@ export default function Page() {
             <ExternalLink href="https://www.nfe.fazenda.gov.br" className="flex items-center gap-2 text-[var(--green)] hover:underline text-sm">→ Portal Nacional da NF-e (Receita Federal)</ExternalLink>
           </div>
         </div>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/nota-fiscal-mei">Nota fiscal MEI: guia completo</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-emitir-nota-fiscal">MEI precisa emitir nota fiscal?</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-nf-mei-prefeitura">Como emitir NF na prefeitura</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

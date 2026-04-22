@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como saber se o DAS do MEI é falso — verificação rápida",
+  title: "Como saber se o DAS é falso em 2026: 5 sinais de golpe",
   description: "Aprenda a verificar se um boleto DAS do MEI é legítimo ou falso em menos de 1 minuto, com o código de barras e o portal oficial.",
-  alternates: { canonical: "https://guiamei.vercel.app/como-saber-se-o-das-e-falso" },
+  alternates: { canonical: "https://guiamei.com.br/como-saber-se-o-das-e-falso" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="metodo1-title">
           <h2 id="metodo1-title" className="font-serif text-2xl mb-4">Método 1: verifique o código de barras (mais rápido)</h2>
@@ -97,6 +100,20 @@ export default function Page() {
             <FaqItem q="Recebi um boleto falso. Preciso fazer algo?" a={<>Não pague e denuncie. Veja o guia completo: <InternalLink href="/golpe-das-mei-boleto-falso">golpe do DAS MEI — como denunciar</InternalLink>.</>} />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/golpe-das-mei-boleto-falso">Golpe do DAS MEI e boleto falso</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI oficial</InternalLink></li>
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/como-consultar-debitos-mei">Como consultar débitos do MEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

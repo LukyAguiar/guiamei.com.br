@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI tem direito a crédito? Benefícios e linhas disponíveis",
+  title: "MEI tem direito a crédito em 2026? Veja linhas e como acessar",
   description: "Descubra todos os direitos de crédito do MEI: empréstimos, FGTS, aposentadoria, auxílio-doença, licença-maternidade e financiamentos em 2026.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-tem-direito-credito" },
+  alternates: { canonical: "https://guiamei.com.br/mei-tem-direito-credito" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="previdencia-title">
           <h2 id="previdencia-title" className="font-serif text-2xl mb-4">Direitos previdenciários (INSS)</h2>
@@ -73,6 +76,20 @@ export default function Page() {
             <FaqItem q="O cônjuge do MEI tem direito à pensão por morte?" a="Sim, se o MEI falecer com contribuições em dia e atender à carência exigida. O cônjuge ou dependentes têm direito à pensão por morte pelo INSS." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-pode-fazer-emprestimo">MEI pode fazer empréstimo?</InternalLink></li>
+            <li>→ <InternalLink href="/cartao-para-mei-melhor-opcao">Melhor cartão para MEI</InternalLink></li>
+            <li>→ <InternalLink href="/melhores-contas-para-mei">Melhores contas para MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-conta-pj">MEI precisa de conta PJ?</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

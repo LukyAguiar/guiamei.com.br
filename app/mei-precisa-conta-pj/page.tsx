@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI precisa de conta PJ? A verdade em 2026",
+  title: "MEI precisa de conta PJ em 2026? Veja quando vale a pena",
   description: "MEI não é obrigado por lei a ter conta PJ, mas ter uma traz vantagens importantes. Veja quando vale a pena e as melhores opções gratuitas em 2026.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-precisa-conta-pj" },
+  alternates: { canonical: "https://guiamei.com.br/mei-precisa-conta-pj" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="obrig-title">
           <h2 id="obrig-title" className="font-serif text-2xl mb-4">É obrigatório ter conta PJ?</h2>
@@ -67,6 +70,20 @@ export default function Page() {
             <FaqItem q="Conta PJ de fintech é tão segura quanto banco tradicional?" a="Sim. Fintechs com conta PJ são reguladas pelo Banco Central e têm FGC (Fundo Garantidor de Créditos) para valores até R$ 250.000. Tão seguras quanto bancos tradicionais." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/melhores-contas-para-mei">Melhores contas para MEI</InternalLink></li>
+            <li>→ <InternalLink href="/cartao-para-mei-melhor-opcao">Melhor cartão para MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-pode-fazer-emprestimo">MEI pode fazer empréstimo?</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-de-contador">MEI precisa de contador?</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

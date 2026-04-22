@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como consultar débitos do MEI em 2026",
+  title: "Como consultar débitos do MEI em 2026: veja pendências do CNPJ",
   description: "Veja como consultar todos os débitos do seu MEI: DAS em atraso, declarações pendentes e situação do CNPJ — pelo celular ou computador.",
-  alternates: { canonical: "https://guiamei.vercel.app/como-consultar-debitos-mei" },
+  alternates: { canonical: "https://guiamei.com.br/como-consultar-debitos-mei" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="portais-title">
           <h2 id="portais-title" className="font-serif text-2xl mb-4">Os 3 portais que você precisa verificar</h2>
@@ -96,6 +99,21 @@ export default function Page() {
             <FaqItem q="Posso consultar débitos de um MEI que não é meu?" a="Sim, a consulta de situação cadastral e dados públicos do CNPJ é pública. Mas para ver os valores detalhados dos débitos, é necessário o CNPJ com acesso Gov.br do titular." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: o que fazer</InternalLink></li>
+            <li>→ <InternalLink href="/mei-irregular-como-regularizar">MEI irregular: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/mei-inapto-o-que-significa">MEI inapto: o que significa</InternalLink></li>
+            <li>→ <InternalLink href="/o-que-acontece-se-nao-pagar">O que acontece se não pagar</InternalLink></li>
+            <li>→ <InternalLink href="/calculadora-das-mei">Calculadora DAS MEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

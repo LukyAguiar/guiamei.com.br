@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Golpe do DAS MEI: como identificar boleto falso em 2026",
+  title: "Golpe do DAS MEI e boleto falso em 2026: como identificar e evitar",
   description: "Golpistas enviam cobranças falsas imitando o DAS do MEI. Saiba como identificar boletos fraudulentos, onde denunciar e como se proteger.",
-  alternates: { canonical: "https://guiamei.vercel.app/golpe-das-mei-boleto-falso" },
+  alternates: { canonical: "https://guiamei.com.br/golpe-das-mei-boleto-falso" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="warning">
           <p className="font-semibold mb-1">⚠️ A Receita Federal não envia boletos por e-mail ou WhatsApp</p>
@@ -104,8 +107,25 @@ export default function Page() {
             <FaqItem q="O código de barras do DAS começa com qual número?" a="Todo DAS legítimo do MEI começa com '8580' na linha digitável. Qualquer boleto com código diferente não é um DAS da Receita Federal." />
             <FaqItem q="Posso pagar o DAS via Pix?" a="O DAS em si não é pago por Pix diretamente. Mas alguns bancos permitem gerar um QR Code a partir do boleto do DAS. Nunca faça Pix para chave aleatória ou CPF de pessoa física para pagar o DAS." />
             <FaqItem q="A Receita me liga para cobrar o DAS?" a="Não. A Receita Federal não realiza cobranças por telefone. Qualquer ligação cobrando pagamento urgente de DAS é golpe." />
+            <FaqItem q="Como identificar um boleto DAS falso?" a="O DAS verdadeiro só pode ser gerado pelo site pgmei.gov.br. Qualquer boleto enviado por e-mail ou WhatsApp não solicitado é suspeito." />
+            <FaqItem q="Existe taxa para emitir o DAS?" a="Não. A emissão do DAS é sempre gratuita." />
+            <FaqItem q="O que fazer se paguei um DAS falso?" a="Entre em contato com seu banco imediatamente para contestar a transação e registre um boletim de ocorrência." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/como-saber-se-o-das-e-falso">Como saber se o DAS é falso</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS oficial</InternalLink></li>
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/como-consultar-debitos-mei">Consultar débitos do MEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

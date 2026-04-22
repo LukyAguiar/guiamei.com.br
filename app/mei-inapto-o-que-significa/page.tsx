@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI inapto: o que significa e como regularizar",
+  title: "MEI inapto: o que significa e como regularizar em 2026",
   description: "CNPJ do MEI com situação 'inapto'? Entenda o que significa, por que acontece, quais as consequências e como regularizar em 2026.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-inapto-o-que-significa" },
+  alternates: { canonical: "https://guiamei.com.br/mei-inapto-o-que-significa" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="warning">
           <p className="font-semibold mb-1">🔴 MEI inapto: situação grave que exige ação rápida</p>
@@ -93,6 +96,20 @@ export default function Page() {
             <FaqItem q="Posso reabrir um MEI cancelado?" a="O mesmo CNPJ não pode ser reativado após cancelamento. Mas você pode abrir um novo MEI com um CNPJ diferente, desde que não tenha vedações (sócio de outra empresa, cargo público incompatível, etc.)." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-irregular-como-regularizar">MEI irregular: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/como-consultar-debitos-mei">Como consultar débitos do MEI</InternalLink></li>
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: o que fazer</InternalLink></li>
+            <li>→ <InternalLink href="/o-que-acontece-se-nao-pagar">O que acontece se não pagar</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI ultrapassou o limite: o que fazer em 2026",
+  title: "MEI ultrapassou o limite em 2026: o que fazer e como regularizar",
   description: "Ultrapassou o limite de R$ 81.000 do MEI? Saiba o que acontece, as consequências, prazo para regularizar e como migrar para ME no Simples Nacional.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-ultrapassou-limite-o-que-fazer" },
+  alternates: { canonical: "https://guiamei.com.br/mei-ultrapassou-limite-o-que-fazer" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="cenarios-title">
           <h2 id="cenarios-title" className="font-serif text-2xl mb-4">Existem dois cenários — e fazem muita diferença</h2>
@@ -100,6 +103,21 @@ export default function Page() {
             <FaqItem q="Fui desenquadrado retroativamente. Como calcular o que devo?" a="Esse cálculo é complexo e varia conforme sua atividade e o Simples Nacional. Procure um contador — tentar calcular sozinho pode resultar em erros que geram multas adicionais." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/quanto-mei-pode-faturar-por-mes">Quanto o MEI pode faturar por mês</InternalLink></li>
+            <li>→ <InternalLink href="/simulador-faturamento-mei">Simulador de faturamento MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-de-contador">MEI precisa de contador?</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

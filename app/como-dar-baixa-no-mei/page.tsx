@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como dar baixa no MEI em 2026 — passo a passo gratuito",
+  title: "Como dar baixa no MEI em 2026: passo a passo gratuito",
   description: "Veja como encerrar o MEI pelo portal Gov.br, o que acontece com as dívidas e quando vale a pena fechar o CNPJ.",
+  alternates: { canonical: "https://guiamei.com.br/como-dar-baixa-no-mei" }
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="warning">
           <p className="font-semibold mb-1">⚠️ Antes de fechar: verifique suas dívidas</p>
@@ -83,6 +87,20 @@ export default function Page() {
             <FaqItem q="Quanto custa dar baixa no MEI?" a="É completamente gratuito. Desconfie de sites que cobram por isso." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-irregular-como-regularizar">MEI irregular: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/o-que-acontece-se-nao-pagar">O que acontece se não pagar</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-inapto-o-que-significa">MEI inapto: o que significa</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

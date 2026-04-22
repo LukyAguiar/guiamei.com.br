@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI irregular: como regularizar em 2026",
+  title: "MEI irregular em 2026: como consultar e regularizar o CNPJ",
   description: "MEI com débitos, declarações atrasadas ou CNPJ inapto? Veja o passo a passo para regularizar sua situação e evitar o cancelamento do CNPJ.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-irregular-como-regularizar" },
+  alternates: { canonical: "https://guiamei.com.br/mei-irregular-como-regularizar" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="causas-title">
           <h2 id="causas-title" className="font-serif text-2xl mb-4">Por que o MEI fica irregular?</h2>
@@ -80,6 +83,21 @@ export default function Page() {
             <FaqItem q="Qual a multa por DASN-SIMEI atrasada?" a="R$ 50 por declaração em atraso, com valor mínimo mesmo que não haja faturamento a declarar. Se houver imposto a pagar, a multa pode ser maior." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/como-consultar-debitos-mei">Como consultar débitos do MEI</InternalLink></li>
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/mei-inapto-o-que-significa">MEI inapto: o que significa</InternalLink></li>
+            <li>→ <InternalLink href="/calculadora-das-mei">Calculadora DAS MEI</InternalLink></li>
+            <li>→ <InternalLink href="/o-que-acontece-se-nao-pagar">O que acontece se não pagar</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, FaqItem , AdSlot , InternalLink } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Cartão de crédito para MEI: melhor opção em 2026",
+  title: "Melhor cartão para MEI em 2026: compare taxas e benefícios",
   description: "Compare os melhores cartões de crédito para MEI em 2026: anuidade zero, cashback, limite e requisitos. Escolha o ideal para o seu negócio.",
-  alternates: { canonical: "https://guiamei.vercel.app/cartao-para-mei-melhor-opcao" },
+  alternates: { canonical: "https://guiamei.com.br/cartao-para-mei-melhor-opcao" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="info">
           <p className="font-semibold mb-1">📌 Cartão PJ vs cartão pessoal para gastos do negócio</p>
@@ -110,6 +113,20 @@ export default function Page() {
             <FaqItem q="Qual o limite mínimo para MEI conseguir cartão?" a="Depende da instituição e do histórico. MEI com CNPJ novo costuma começar com limites menores (R$ 500–2.000) que aumentam com o tempo de uso e faturamento." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-precisa-conta-pj">MEI precisa de conta PJ?</InternalLink></li>
+            <li>→ <InternalLink href="/melhores-contas-para-mei">Melhores contas para MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-pode-fazer-emprestimo">MEI pode fazer empréstimo?</InternalLink></li>
+            <li>→ <InternalLink href="/mei-tem-direito-credito">MEI tem direito a crédito?</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

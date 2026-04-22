@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI pode fazer empréstimo? Linhas de crédito em 2026",
+  title: "MEI pode fazer empréstimo em 2026? Veja requisitos e cuidados",
   description: "Sim, MEI pode fazer empréstimo. Conheça as principais linhas de crédito disponíveis em 2026, taxas, requisitos e como aumentar suas chances de aprovação.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-pode-fazer-emprestimo" },
+  alternates: { canonical: "https://guiamei.com.br/mei-pode-fazer-emprestimo" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="success">
           <p className="font-semibold mb-1">✅ MEI pode sim fazer empréstimo</p>
@@ -111,6 +114,20 @@ export default function Page() {
             <FaqItem q="Posso usar o empréstimo para qualquer finalidade?" a="Linhas de capital de giro permitem uso livre. Já linhas de investimento (compra de equipamento, por exemplo) podem exigir comprovação do uso. Consulte as condições específicas." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-tem-direito-credito">MEI tem direito a crédito?</InternalLink></li>
+            <li>→ <InternalLink href="/cartao-para-mei-melhor-opcao">Melhor cartão para MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-conta-pj">MEI precisa de conta PJ?</InternalLink></li>
+            <li>→ <InternalLink href="/melhores-contas-para-mei">Melhores contas para MEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

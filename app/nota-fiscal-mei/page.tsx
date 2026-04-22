@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, ExternalLink, FaqItem } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, ExternalLink, FaqItem , AdSlot , InternalLink } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como emitir nota fiscal MEI em 2026 — NFS-e e NF-e",
+  title: "Nota fiscal MEI em 2026: NFS-e e NF-e — quando e como emitir",
   description: "Saiba quando o MEI é obrigado a emitir nota fiscal, como emitir NFS-e pelo portal nacional e NF-e pelo estado. Guia atualizado 2026.",
+  alternates: { canonical: "https://guiamei.com.br/nota-fiscal-mei" }
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section>
           <p className="text-[var(--muted)] leading-relaxed">
@@ -88,8 +92,26 @@ export default function Page() {
             <FaqItem q="MEI paga imposto sobre nota fiscal emitida?" a="Não diretamente. O MEI já paga o DAS mensalmente que cobre o ISS (serviços) e ICMS (comércio). Emitir nota fiscal não gera imposto adicional, exceto em situações específicas de retenção pelo contratante." />
             <FaqItem q="O cliente pode reter ISS na nota do MEI?" a="Sim. Alguns municípios obrigam empresas a reter o ISS na fonte quando contratam MEIs. Nesse caso, o valor é descontado do pagamento. Verifique as regras do município do tomador." />
             <FaqItem q="Posso emitir nota fiscal retroativa?" a="Depende do município e do sistema. Em geral, a nota deve ser emitida no momento ou logo após a prestação do serviço. Evite emitir com data retroativa." />
+            <FaqItem q="MEI é obrigado a emitir nota fiscal?" a="Sim, quando vende para outra empresa (CNPJ). Para pessoa física (CPF), a emissão é facultativa, mas pode ser solicitada pelo comprador." />
+            <FaqItem q="Qual portal usar para emitir nota fiscal de serviço?" a="Para serviços, use o portal da prefeitura do seu município. Para mercadorias, acesse o portal da SEFAZ do seu estado." />
+            <FaqItem q="Nota fiscal MEI tem custo?" a="Não. A emissão de nota fiscal pelo MEI é gratuita, tanto pelo portal da prefeitura quanto pelo sistema federal." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-precisa-emitir-nota-fiscal">MEI precisa emitir nota fiscal?</InternalLink></li>
+            <li>→ <InternalLink href="/mei-como-emitir-nota-fiscal">Como emitir nota fiscal sendo MEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-nf-mei-prefeitura">Como emitir NF na prefeitura</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

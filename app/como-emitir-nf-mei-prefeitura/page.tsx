@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como emitir nota fiscal MEI pela prefeitura — NFS-e passo a passo",
+  title: "Como emitir nota fiscal MEI na prefeitura em 2026: passo a passo",
   description: "Guia completo para emitir NFS-e (nota fiscal de serviços) pela prefeitura sendo MEI: cadastro, login, preenchimento e envio ao cliente.",
-  alternates: { canonical: "https://guiamei.vercel.app/como-emitir-nf-mei-prefeitura" },
+  alternates: { canonical: "https://guiamei.com.br/como-emitir-nf-mei-prefeitura" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="info">
           <p className="font-semibold mb-1">📌 Este guia é para MEI prestador de serviços</p>
@@ -66,6 +69,20 @@ export default function Page() {
             <FaqItem q="Como cancelar uma nota emitida errada?" a="No próprio sistema de emissão há a opção de cancelar a nota. Geralmente há um prazo (24h a 7 dias dependendo da prefeitura). Após o prazo, é necessário emitir uma nota de substituição." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/nota-fiscal-mei">Nota fiscal MEI: guia completo</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-emitir-nota-fiscal">MEI precisa emitir nota fiscal?</InternalLink></li>
+            <li>→ <InternalLink href="/mei-como-emitir-nota-fiscal">Como emitir nota fiscal sendo MEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

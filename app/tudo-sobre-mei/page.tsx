@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Tudo sobre MEI em 2026: o guia definitivo",
+  title: "Tudo sobre MEI em 2026: guia definitivo do zero ao avançado",
   description: "Tudo que você precisa saber sobre o MEI em 2026: o que é, como abrir, obrigações, direitos, limites, benefícios e como fechar o CNPJ.",
-  alternates: { canonical: "https://guiamei.vercel.app/tudo-sobre-mei" },
+  alternates: { canonical: "https://guiamei.com.br/tudo-sobre-mei" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="oque-title">
           <h2 id="oque-title" className="font-serif text-2xl mb-4">O que é o MEI?</h2>
@@ -124,6 +127,9 @@ export default function Page() {
             <FaqItem q="Como fechar um MEI?" a={<>O encerramento é gratuito e online pelo Portal do Empreendedor. Veja o passo a passo: <InternalLink href="/como-dar-baixa-no-mei">como dar baixa no MEI</InternalLink>.</>} />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
 
       </div>
 

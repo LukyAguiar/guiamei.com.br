@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Quanto o MEI pode faturar por mês em 2026",
+  title: "Quanto o MEI pode faturar por mês em 2026? Cálculo e limite",
   description: "O MEI pode faturar até R$ 81.000 por ano — equivalente a R$ 6.750 por mês. Entenda como funciona o limite proporcional e o que fazer se ultrapassar.",
-  alternates: { canonical: "https://guiamei.vercel.app/quanto-mei-pode-faturar-por-mes" },
+  alternates: { canonical: "https://guiamei.com.br/quanto-mei-pode-faturar-por-mes" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="limite-title">
           <h2 id="limite-title" className="font-serif text-2xl mb-4">O limite em números</h2>
@@ -98,6 +101,20 @@ export default function Page() {
             <FaqItem q="Presente ou bonificação conta como faturamento?" a="Depende. Se foi em troca de serviço ou produto, sim — é permuta e deve ser contabilizada pelo valor de mercado. Se foi um presente sem relação comercial, não." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/mei-ultrapassou-limite-o-que-fazer">MEI ultrapassou o limite: e agora?</InternalLink></li>
+            <li>→ <InternalLink href="/simulador-faturamento-mei">Simulador de faturamento MEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

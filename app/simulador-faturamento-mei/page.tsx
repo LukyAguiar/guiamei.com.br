@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Badge, AlertBox, RelatedPages, InternalLink } from "../components/ui";
+import { Badge, AlertBox, RelatedPages, InternalLink , AdSlot } from "../components/ui";
 
 const LIMITE_ANUAL = 81000;
 const MEDIA_MENSAL = LIMITE_ANUAL / 12;
@@ -166,6 +166,53 @@ export default function Page() {
             })}
           </div>
         </section>
+
+        {/* AD FINAL */}
+        {/* FAQ */}
+        <section className="space-y-2">
+          <h2 className="font-serif text-2xl mb-4">Dúvidas frequentes</h2>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              Qual é o limite do MEI em 2026?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">O limite anual do MEI em 2026 é R$ 81.000, equivalente a R$ 6.750 por mês. Para MEI caminhoneiro, o limite é R$ 251.600/ano.</div>
+          </details>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              Como funciona o limite proporcional no ano de abertura?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">No ano em que o MEI é aberto, o limite é proporcional ao número de meses restantes. Se abriu em julho, por exemplo, o limite é R$ 6.750 × 6 = R$ 40.500 para aquele ano.</div>
+          </details>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              O que acontece se ultrapassar o limite?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">Até 20% acima do limite (R$ 97.200), você migra para Microempresa (ME) no ano seguinte. Acima de 20%, a migração é imediata e retroativa a janeiro do mesmo ano, com tributação maior.</div>
+          </details>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              Preciso somar todos os meses para saber se ultrapassei?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">Sim. O limite é calculado sobre o faturamento bruto total acumulado no ano. Este simulador faz exatamente esse cálculo para você, mês a mês.</div>
+          </details>
+        </section>
+
+        {/* INTERLINKS */}
+        <div className="bg-blue-50 border border-blue-200 text-blue-800 rounded-xl p-5 text-sm leading-relaxed">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1">
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026: regras completas</InternalLink></li>
+            <li>→ <InternalLink href="/mei-ultrapassou-limite-o-que-fazer">MEI ultrapassou o limite: o que fazer</InternalLink></li>
+            <li>→ <InternalLink href="/quanto-mei-pode-faturar-por-mes">Quanto o MEI pode faturar por mês</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+          </ul>
+        </div>
+
+        <AdSlot position="final" />
 
       </div>
 

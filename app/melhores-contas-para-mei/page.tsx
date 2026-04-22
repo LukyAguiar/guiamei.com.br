@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Melhores contas para MEI em 2026 — gratuitas e digitais",
+  title: "Melhores contas para MEI em 2026: compare gratuitas e pagas",
   description: "Compare as melhores contas PJ para MEI em 2026: Nubank, Inter, Mercado Pago e outras. Sem anuidade, abertura pelo celular e recursos para empreendedores.",
-  alternates: { canonical: "https://guiamei.vercel.app/melhores-contas-para-mei" },
+  alternates: { canonical: "https://guiamei.com.br/melhores-contas-para-mei" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="contas-title">
           <h2 id="contas-title" className="font-serif text-2xl mb-4">Contas gratuitas para MEI</h2>
@@ -120,6 +123,20 @@ export default function Page() {
             <FaqItem q="Conta PJ tem IOF ou taxas escondidas?" a="As contas listadas acima são gratuitas na manutenção. Fique atento a cobranças em saques no caixa eletrônico ou acima do limite de transações incluídas no plano gratuito." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-precisa-conta-pj">MEI precisa de conta PJ?</InternalLink></li>
+            <li>→ <InternalLink href="/cartao-para-mei-melhor-opcao">Melhor cartão para MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-pode-fazer-emprestimo">MEI pode fazer empréstimo?</InternalLink></li>
+            <li>→ <InternalLink href="/mei-tem-direito-credito">MEI tem direito a crédito?</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

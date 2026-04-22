@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contato — MEI/guia",
   description: "Entre em contato com o MEI/guia para dúvidas, sugestões ou reportar informações desatualizadas.",
+  alternates: { canonical: "https://guiamei.com.br/contato" },
 };
 
 export default function Page() {

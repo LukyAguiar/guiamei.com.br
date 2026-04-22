@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como emitir o DAS MEI pelo celular em 2026",
+  title: "Como emitir o DAS MEI pelo celular em 2026: app e site mobile",
   description: "Passo a passo para emitir e pagar o DAS do MEI pelo celular usando o app oficial ou o site mobile — rápido, gratuito e sem computador.",
-  alternates: { canonical: "https://guiamei.vercel.app/emitir-das-pelo-celular" },
+  alternates: { canonical: "https://guiamei.com.br/emitir-das-pelo-celular" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="opcoes-title">
           <h2 id="opcoes-title" className="font-serif text-2xl mb-4">Duas formas de emitir pelo celular</h2>
@@ -85,6 +88,20 @@ export default function Page() {
             <FaqItem q="Quanto tempo leva para o pagamento ser confirmado?" a="O sistema da Receita atualiza em até 2 dias úteis após o pagamento. Se continuar aparecendo como pendente após esse prazo, use a opção 'Informar pagamento' no PGMEI com o número do recibo." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI</InternalLink></li>
+            <li>→ <InternalLink href="/app-mei-como-usar">Como usar o app MEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-pagar-das-automatico">Pagar DAS automaticamente</InternalLink></li>
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: o que fazer</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

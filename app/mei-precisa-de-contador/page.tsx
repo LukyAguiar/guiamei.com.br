@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI precisa de contador? A resposta honesta em 2026",
+  title: "MEI precisa de contador em 2026? Resposta honesta e definitiva",
   description: "Descubra se o MEI é obrigado a contratar contador, quando vale a pena e o que você pode fazer sozinho. Resposta direta e sem enrolação.",
+  alternates: { canonical: "https://guiamei.com.br/mei-precisa-de-contador" }
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="success">
           <p className="font-semibold mb-1">✅ Resposta direta</p>
@@ -69,8 +73,25 @@ export default function Page() {
             <FaqItem q="Quanto custa um contador para MEI?" a="Para MEIs simples, muitos contadores cobram entre R$ 80 e R$ 200/mês. Mas repita: não é obrigatório. Só contrate se realmente precisar do serviço." />
             <FaqItem q="O SEBRAE pode me ajudar de graça?" a="Sim! O SEBRAE oferece orientação gratuita para MEIs em todo o Brasil, incluindo consultoria básica sobre obrigações. Acesse sebrae.com.br ou a unidade mais próxima." />
             <FaqItem q="Posso deduzir o contador no imposto de renda?" a="O MEI não entrega Imposto de Renda como PJ — isso é feito na declaração de pessoa física. Despesas com contador para o MEI não são dedutíveis no IR pessoal." />
+            <FaqItem q="MEI precisa pagar contador?" a="Não é obrigatório. Toda a burocracia do MEI pode ser feita gratuitamente pelo próprio empreendedor." />
+            <FaqItem q="Quando vale a pena contratar um contador sendo MEI?" a="Quando você está próximo do limite de faturamento, tem funcionário, quer migrar para ME/EPP, ou enfrenta problemas com a Receita Federal." />
+            <FaqItem q="Contador pode cobrar pelo cadastro do MEI?" a="Não. O registro no Portal do Empreendedor é 100% gratuito. Se alguém cobrou, você pode registrar reclamação no Procon." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI</InternalLink></li>
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/mei-ultrapassou-limite-o-que-fazer">MEI ultrapassou o limite</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

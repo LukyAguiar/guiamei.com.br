@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Como declarar o DASN-SIMEI 2026 — passo a passo",
+  title: "Como declarar o DASN-SIMEI em 2026: prazo até 31 de maio",
   description: "Aprenda como fazer a declaração anual do MEI (DASN-SIMEI), prazo, o que declarar e como corrigir erros. Guia atualizado 2026.",
+  alternates: { canonical: "https://guiamei.com.br/como-declarar-dasn-simei" }
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section>
           <p className="text-[var(--muted)] leading-relaxed">
@@ -89,8 +93,26 @@ export default function Page() {
             <FaqItem q="MEI sem faturamento precisa declarar?" a="Sim! Mesmo sem ter faturado nada no ano, a declaração é obrigatória. Informe R$ 0,00 no campo de faturamento." />
             <FaqItem q="A declaração é gratuita?" a="Sim, 100% gratuita. Nunca pague para alguém fazer a sua declaração — o processo é simples e feito direto no portal do governo." />
             <FaqItem q="O que acontece se eu não declarar?" a="Multa de R$ 50,00 mínimo. Além disso, o CNPJ fica com pendências que podem bloquear emissão de certidões e até levar ao cancelamento." />
+            <FaqItem q="Quando é o prazo da DASN-SIMEI em 2026?" a="O prazo é até 31 de maio de 2026. A declaração é referente ao faturamento do ano anterior (2025). Se você não faturou nada, ainda assim precisa declarar." />
+            <FaqItem q="DASN-SIMEI é paga ou gratuita?" a="É completamente gratuita. Nunca pague por serviços que prometem fazer a declaração do MEI — ela é feita pelo próprio empreendedor no portal da Receita Federal." />
+            <FaqItem q="O que acontece se não declarar o DASN-SIMEI?" a="O CNPJ fica em situação irregular, você perde o Simples Nacional e pode ser cancelado. Além disso, incide multa mínima de R$ 50,00 por atraso." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI</InternalLink></li>
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: o que fazer</InternalLink></li>
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/mei-irregular-como-regularizar">MEI irregular: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/nota-fiscal-mei">Nota fiscal MEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

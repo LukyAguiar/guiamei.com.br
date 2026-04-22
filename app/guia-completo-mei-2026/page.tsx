@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Badge, AlertBox, InternalLink, FaqItem, ExternalLink } from "../components/ui";
+import { Badge, AlertBox, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Guia Completo do MEI 2026: tudo sobre obrigações, direitos e limites",
+  title: "Guia completo do MEI 2026: tudo sobre DAS, nota fiscal e obrigações",
   description: "O guia mais completo sobre MEI em 2026: DAS, DASN-SIMEI, nota fiscal, limites, funcionários, direitos previdenciários, crédito e muito mais.",
-  alternates: { canonical: "https://guiamei.vercel.app/guia-completo-mei-2026" },
+  alternates: { canonical: "https://guiamei.com.br/guia-completo-mei-2026" },
 };
 
 const secoes = [
@@ -170,6 +170,19 @@ export default function Page() {
         </section>
 
       </div>
+    
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+            <li>→ <InternalLink href="/nota-fiscal-mei">Nota fiscal MEI</InternalLink></li>
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: o que fazer</InternalLink></li>
+          </ul>
+        </AlertBox>
+
     </main>
   );
 }

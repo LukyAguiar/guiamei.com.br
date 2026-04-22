@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Limite do MEI em 2026: faturamento, funcionários e atividades",
+  title: "Limite do MEI em 2026: R$ 81 mil/ano e o que fazer se ultrapassar",
   description: "Veja o limite de faturamento do MEI em 2026, o que acontece se ultrapassar, limites de funcionários e de atividades permitidas.",
+  alternates: { canonical: "https://guiamei.com.br/limite-mei-2026" }
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="fat-title">
           <h2 id="fat-title" className="font-serif text-2xl mb-4">Limite de faturamento</h2>
@@ -85,8 +89,26 @@ export default function Page() {
             <FaqItem q="O limite do MEI vai aumentar em 2026?" a="Não houve anúncio de aumento do limite de R$ 81.000 para 2026. Atualizaremos este guia assim que houver mudanças oficiais." />
             <FaqItem q="Faturamento proporcional no ano de abertura?" a="Sim! Se você abriu o MEI no meio do ano, o limite é proporcional. Exemplo: abriu em julho, seu limite para 2026 é R$ 40.500 (6 meses × R$ 6.750)." />
             <FaqItem q="Vale a pena ficar no limite propositalmente?" a="Alguns empreendedores 'freiam' o faturamento para não perder o MEI. Isso pode ser contraproducente — faturar mais como ME pode ser mais lucrativo mesmo com mais impostos. Faça as contas." />
+            <FaqItem q="Qual é o limite de faturamento do MEI em 2026?" a="O limite é de R$ 81.000 por ano (ou R$ 6.750 por mês, em média). Para MEI caminhoneiro, o limite é de R$ 251.600/ano." />
+            <FaqItem q="O que acontece se ultrapassar o limite do MEI?" a="Se ultrapassar até 20% (R$ 97.200), você migra para Microempresa (ME) no ano seguinte. Se ultrapassar mais de 20%, a migração é imediata e retroativa a janeiro." />
+            <FaqItem q="O limite é proporcional no ano de abertura?" a="Sim. Se você abriu o MEI em julho, o limite é proporcional: R$ 6.750 × 6 meses = R$ 40.500." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-ultrapassou-limite-o-que-fazer">MEI ultrapassou o limite: e agora?</InternalLink></li>
+            <li>→ <InternalLink href="/quanto-mei-pode-faturar-por-mes">Quanto o MEI pode faturar por mês</InternalLink></li>
+            <li>→ <InternalLink href="/simulador-faturamento-mei">Simulador de faturamento MEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-declarar-dasn-simei">Como declarar o DASN-SIMEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-ou-clt">MEI ou CLT: qual vale mais?</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

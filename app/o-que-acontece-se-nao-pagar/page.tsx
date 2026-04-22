@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "O que acontece se não pagar o MEI? Consequências em 2026",
+  title: "O que acontece se o MEI não pagar o DAS em 2026? Consequências",
   description: "Veja o que acontece quando o MEI não paga o DAS: multas, perda do INSS, cancelamento do CNPJ e como regularizar.",
+  alternates: { canonical: "https://guiamei.com.br/o-que-acontece-se-nao-pagar" }
 };
 
 export default function Page() {
@@ -16,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="warning">
           <p className="font-semibold mb-2">⚠️ Resumo rápido das consequências</p>
@@ -72,9 +76,27 @@ export default function Page() {
           <div className="space-y-2">
             <FaqItem q="O CNPJ cancelado pode ser recuperado?" a="Não diretamente. Após o cancelamento, você precisaria abrir um novo MEI (novo CNPJ). Por isso é tão importante regularizar antes de 12 meses de inadimplência." />
             <FaqItem q="Débito do MEI vai para o nome (CPF)?" a="Tecnicamente o MEI é uma pessoa jurídica, mas como o CPF do titular é vinculado ao CNPJ, débitos muito antigos inscritos na Dívida Ativa podem impactar o CPF." />
-            <FaqItem q="Posso fechar o MEI se tiver dívida?" a={<>Sim, mas as dívidas não são canceladas com o fechamento. Você pode dar baixa e ainda precisará quitar os débitos. Veja:{" "}<InternalLink href="/como-dar-baixa-no-mei">como dar baixa no MEI</InternalLink>.</>} />
+            <FaqItem q="Posso fechar o MEI se tiver dívida?" a={<>Sim, mas as dívidas não são canceladas com o fechamento. Você pode dar baixa e ainda precisará quitar os débitos. Veja:{" "}<InternalLink href="/como-dar-baixa-no-mei">como dar baixa no MEI</InternalLink>.</>
+            <FaqItem q="Quantos meses atrasados causam cancelamento do MEI?" a="Após 12 meses consecutivos de inadimplência, a Receita Federal pode cancelar o CNPJ automaticamente." />
+            <FaqItem q="DAS atrasado perde o INSS do mês?" a="Sim. Meses não pagos não contam para a aposentadoria." />
+            <FaqItem q="DAS atrasado gera multa de quanto?" a="Multa de 2% + 0,33% ao dia, limitada a 20%, mais juros Selic." />} />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/calculadora-das-mei">Calculadora DAS MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-irregular-como-regularizar">MEI irregular: como regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/como-consultar-debitos-mei">Como consultar débitos do MEI</InternalLink></li>
+            <li>→ <InternalLink href="/mei-inapto-o-que-significa">MEI inapto: o que significa</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

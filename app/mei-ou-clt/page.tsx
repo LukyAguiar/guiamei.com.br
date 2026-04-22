@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI ou CLT: qual é melhor em 2026? Comparação completa",
+  title: "MEI ou CLT em 2026? Compare renda líquida e benefícios",
   description: "Compare MEI e CLT em 2026: impostos, direitos trabalhistas, aposentadoria, FGTS, plano de saúde e quando vale a pena migrar de um para o outro.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-ou-clt" },
+  alternates: { canonical: "https://guiamei.com.br/mei-ou-clt" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <AlertBox type="info">
           <p className="font-semibold mb-1">📌 Não existe resposta universal</p>
@@ -131,6 +134,20 @@ export default function Page() {
             <FaqItem q="Como migrar de CLT para MEI?" a="Abra o MEI pelo Portal do Empreendedor antes ou depois de sair do emprego. Não há impedimento para abrir o CNPJ enquanto ainda está empregado. Planeje a transição financeira com pelo menos 3–6 meses de reserva de emergência." />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-ou-autonomo">MEI ou autônomo</InternalLink></li>
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/mei-pode-ter-funcionario">MEI pode ter funcionário?</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-de-contador">MEI precisa de contador?</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

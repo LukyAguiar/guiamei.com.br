@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "MEI ou autônomo: qual a diferença e qual é melhor em 2026?",
+  title: "MEI ou autônomo em 2026? Compare custos, benefícios e riscos",
   description: "Entenda as diferenças entre trabalhar como MEI (com CNPJ) e como autônomo sem registro — impostos, direitos, segurança e quando vale a pena formalizar.",
-  alternates: { canonical: "https://guiamei.vercel.app/mei-ou-autonomo" },
+  alternates: { canonical: "https://guiamei.com.br/mei-ou-autonomo" },
 };
 
 export default function Page() {
@@ -17,6 +17,9 @@ export default function Page() {
       />
 
       <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+
+        {/* AD TOPO */}
+        <AdSlot position="topo" />
 
         <section aria-labelledby="diferenca-title">
           <h2 id="diferenca-title" className="font-serif text-2xl mb-4">Qual é a diferença?</h2>
@@ -110,6 +113,20 @@ export default function Page() {
             <FaqItem q="Preciso encerrar o MEI se parar de trabalhar por conta própria?" a={<>Não é obrigatório fechar imediatamente, mas o DAS continua sendo gerado mensalmente enquanto o MEI estiver ativo. Se não vai mais usar, o ideal é dar baixa. Veja: <InternalLink href="/como-dar-baixa-no-mei">como dar baixa no MEI</InternalLink>.</>} />
           </div>
         </section>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
+        {/* INTERLINKS */}
+        <AlertBox type="info">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1 text-sm">
+            <li>→ <InternalLink href="/mei-ou-clt">MEI ou CLT: qual vale mais?</InternalLink></li>
+            <li>→ <InternalLink href="/limite-mei-2026">Limite do MEI em 2026</InternalLink></li>
+            <li>→ <InternalLink href="/mei-precisa-de-contador">MEI precisa de contador?</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI</InternalLink></li>
+          </ul>
+        </AlertBox>
 
       </div>
 

@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import type { Metadata } from "next";
-import { Badge, AlertBox, RelatedPages, InternalLink } from "../components/ui";
-import Link from "next/link";
+import { Badge, AlertBox, RelatedPages, InternalLink , AdSlot } from "../components/ui";
+
+// Metadata não funciona em client components — será exportada como layout separado
+// mas deixamos aqui para referência do conteúdo
 
 const TAXA_MULTA_DIA = 0.0033;
 const MULTA_MAX = 0.20;
-const SELIC_MENSAL = 0.0107;
+const SELIC_MENSAL = 0.0107; // aproximado 2026
 
 function calcularDAS(valorBase: number, mesesAtraso: number) {
   if (mesesAtraso === 0) return { total: valorBase, multa: 0, juros: 0 };
@@ -45,10 +47,14 @@ export default function Page() {
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-6 pt-12 space-y-10">
+      <div className="max-w-3xl mx-auto px-6 pt-12 space-y-8">
+
+        {/* Calculadora */}
         <section className="bg-white border border-[var(--border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-serif text-xl mb-6">Configure o cálculo</h2>
+
           <div className="space-y-6">
+            {/* Atividade */}
             <div>
               <label className="block text-sm font-semibold mb-2">Tipo de atividade</label>
               <div className="grid grid-cols-3 gap-2">
@@ -69,6 +75,7 @@ export default function Page() {
               </div>
             </div>
 
+            {/* Meses de atraso */}
             <div>
               <label className="block text-sm font-semibold mb-2">
                 Meses em atraso: <span className="text-[var(--green)]">{meses} {meses === 1 ? "mês" : "meses"}</span>
@@ -90,6 +97,7 @@ export default function Page() {
             </div>
           </div>
 
+          {/* Resultado */}
           <div className={`mt-6 rounded-2xl p-5 ${meses > 0 ? "bg-red-50 border-2 border-red-200" : "bg-[var(--green-light)] border-2 border-[#b2ddc4]"}`}>
             <p className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)] mb-3">
               {meses === 0 ? "Valor para pagamento em dia" : `Valor com ${meses} ${meses === 1 ? "mês" : "meses"} de atraso`}
@@ -120,18 +128,14 @@ export default function Page() {
               </div>
             </div>
             {meses > 0 && (
-              <p className="text-xs text-[var(--muted)] mt-3">
-                * Valor estimado. O valor oficial com multa e juros atualizados é calculado pelo portal PGMEI no momento da emissão do boleto. Veja como: <InternalLink href="/das-atrasado">como pagar o DAS atrasado</InternalLink>.
-              </p>
+              <p className="text-xs text-[var(--muted)] mt-3">* Valor estimado. O valor exato com juros Selic atualizados é calculado pelo portal PGMEI no momento da emissão do boleto.</p>
             )}
           </div>
         </section>
 
         <AlertBox type="warning">
           <p className="font-semibold mb-1">⚠️ Esta calculadora é uma estimativa</p>
-          <p className="text-sm">
-            Para o valor oficial e exato com multa e juros atualizados, sempre gere o DAS pelo portal PGMEI da Receita Federal. O sistema oficial usa a taxa Selic diária atualizada. Veja como: <InternalLink href="/das-atrasado">como pagar o DAS atrasado</InternalLink>.
-          </p>
+          <p className="text-sm">Para o valor oficial e exato com multa e juros atualizados, sempre gere o DAS pelo portal PGMEI da Receita Federal. O sistema oficial usa a taxa Selic diária atualizada. Veja como: <InternalLink href="/das-atrasado">como pagar o DAS atrasado</InternalLink>.</p>
         </AlertBox>
 
         <section aria-labelledby="tabela-title">
@@ -154,8 +158,56 @@ export default function Page() {
           </div>
         </section>
 
-        <RelatedPages current="/calculadora-das-mei" />
+        {/* FAQ */}
+        <section className="space-y-2">
+          <h2 className="font-serif text-2xl mb-4">Dúvidas frequentes</h2>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              Como é calculada a multa do DAS atrasado?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">2% fixo sobre o valor + 0,33% por dia de atraso, limitado a 20% de multa máxima. Depois disso, continuam incidindo apenas os juros Selic.</div>
+          </details>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              O valor calculado aqui é oficial?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">Esta calculadora é uma estimativa baseada nas regras do Simples Nacional. O valor exato e oficial é sempre o gerado pelo sistema PGMEI da Receita Federal, que considera a data exata de pagamento.</div>
+          </details>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              Posso parcelar os meses em atraso?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">Sim, em até 60 parcelas mínimas de R$ 50,00 cada, com juros Selic. O parcelamento é feito pelo portal do Simples Nacional com login Gov.br.</div>
+          </details>
+          <details className="bg-white border border-[var(--border)] rounded-xl overflow-hidden">
+            <summary className="flex justify-between items-center px-5 py-4 font-medium text-[0.95rem] cursor-pointer list-none">
+              Qual a taxa Selic usada no cálculo?
+              <span className="text-[var(--muted)] text-xs ml-3 shrink-0 chevron">▼</span>
+            </summary>
+            <div className="px-5 pb-4 text-[var(--muted)] text-sm leading-relaxed">Esta calculadora usa uma taxa Selic mensal aproximada de 1,07% (equivalente a ~13,6% ao ano). A taxa exata varia mês a mês; confira o valor oficial no site do Banco Central.</div>
+          </details>
+        </section>
+
+        {/* INTERLINKS */}
+        <div className="bg-blue-50 border border-blue-200 text-blue-800 rounded-xl p-5 text-sm leading-relaxed">
+          <p className="font-semibold mb-2">🔗 Veja também</p>
+          <ul className="space-y-1">
+            <li>→ <InternalLink href="/das-atrasado">DAS atrasado: passo a passo para regularizar</InternalLink></li>
+            <li>→ <InternalLink href="/como-consultar-debitos-mei">Como consultar débitos do MEI</InternalLink></li>
+            <li>→ <InternalLink href="/como-emitir-das-mei">Como emitir o DAS-MEI oficial</InternalLink></li>
+            <li>→ <InternalLink href="/mei-irregular-como-regularizar">MEI irregular: como regularizar o CNPJ</InternalLink></li>
+          </ul>
+        </div>
+
+        {/* AD FINAL */}
+        <AdSlot position="final" />
+
       </div>
+
+      <RelatedPages current="/calculadora-das-mei" />
     </main>
   );
 }
