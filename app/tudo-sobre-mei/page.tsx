@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Tudo sobre MEI em 2026: guia definitivo do zero ao avançado",
   description: "Tudo que você precisa saber sobre o MEI em 2026: o que é, como abrir, obrigações, direitos, limites, benefícios e como fechar o CNPJ.",

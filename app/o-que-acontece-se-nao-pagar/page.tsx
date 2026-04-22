@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "O que acontece se o MEI não pagar o DAS em 2026? Consequências",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="O que acontece se o MEI não pagar o DAS em 2026? Consequências"
+        description="Veja o que acontece quando o MEI não paga o DAS: multas, perda do INSS, cancelamento do CNPJ e como regularizar."
+        url="https://guiamei.com.br/o-que-acontece-se-nao-pagar"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "O CNPJ cancelado pode ser recuperado?", a: "Não diretamente. Após o cancelamento, você precisaria abrir um novo MEI com novo CNPJ, perdendo o histórico anterior." },
+    { q: "Quantos meses atrasados causam cancelamento do MEI?", a: "Após 12 meses consecutivos de inadimplência, a Receita Federal pode cancelar o CNPJ automaticamente." },
+    { q: "DAS atrasado perde o INSS do mês?", a: "Sim. Meses não pagos não contam para a aposentadoria. Pagar em atraso regulariza o CNPJ, mas o período sem cobertura pode exigir análise separada." },
+    { q: "Débito do MEI vai para o nome (CPF)?", a: "O MEI é uma pessoa jurídica, mas como o CPF do titular é vinculado ao CNPJ, débitos inscritos na Dívida Ativa podem impactar o CPF." }
+      ]} />
       <PageHero
         badge="Inadimplência MEI · 2026"
         title="O que acontece se não pagar o MEI?"

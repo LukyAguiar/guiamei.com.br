@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Badge, AlertBox, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Guia completo do MEI 2026: tudo sobre DAS, nota fiscal e obrigações",
   description: "O guia mais completo sobre MEI em 2026: DAS, DASN-SIMEI, nota fiscal, limites, funcionários, direitos previdenciários, crédito e muito mais.",

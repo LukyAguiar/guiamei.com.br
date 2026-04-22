@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Melhores contas para MEI em 2026: compare gratuitas e pagas",
   description: "Compare as melhores contas PJ para MEI em 2026: Nubank, Inter, Mercado Pago e outras. Sem anuidade, abertura pelo celular e recursos para empreendedores.",

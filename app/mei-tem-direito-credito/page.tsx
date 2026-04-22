@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI tem direito a crédito em 2026? Veja linhas e como acessar",
   description: "Descubra todos os direitos de crédito do MEI: empréstimos, FGTS, aposentadoria, auxílio-doença, licença-maternidade e financiamentos em 2026.",

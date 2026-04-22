@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como saber se o DAS é falso em 2026: 5 sinais de golpe",
   description: "Aprenda a verificar se um boleto DAS do MEI é legítimo ou falso em menos de 1 minuto, com o código de barras e o portal oficial.",

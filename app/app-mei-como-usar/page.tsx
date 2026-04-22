@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como usar o App MEI em 2026: passo a passo completo",
   description: "Aprenda a usar o aplicativo MEI da Receita Federal: emitir DAS, consultar situação, declarar DASN-SIMEI e muito mais pelo celular.",

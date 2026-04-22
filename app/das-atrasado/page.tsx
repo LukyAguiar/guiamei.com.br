@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem, AdSlot } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem, AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "DAS MEI atrasado em 2026: multa, juros e como parcelar em até 60x",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="DAS MEI atrasado em 2026: multa, juros e como parcelar em até 60x"
+        description="Saiba o que acontece quando o DAS do MEI fica em atraso, como calcular multa e juros, como parcelar e como regularizar seu CNPJ."
+        url="https://guiamei.com.br/das-atrasado"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "Posso pagar o DAS atrasado pelo app do banco?", a: "Sim, desde que use o boleto com o valor já corrigido gerado pelo PGMEI. Nunca pague o valor original do mês — será recusado." },
+    { q: "O CNPJ fica irregular enquanto estiver em atraso?", a: "Sim. Com débitos em atraso, seu CNPJ pode ficar com situação irregular, o que impede emissão de certidões e pode travar contratos." },
+    { q: "Posso parcelar os meses em atraso?", a: "Sim, em até 60 parcelas mínimas de R$ 50,00 cada, com juros Selic. O parcelamento é feito pelo portal do Simples Nacional com login Gov.br." },
+    { q: "Qual a multa por atraso no DAS do MEI?", a: "Multa de 2% fixo sobre o valor + 0,33% ao dia de atraso, limitada a 20% máximo, mais juros Selic acumulados." }
+      ]} />
       <PageHero
         badge="DAS atrasado · 2026"
         title="DAS MEI atrasado: como regularizar"

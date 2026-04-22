@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI pode fazer empréstimo em 2026? Veja requisitos e cuidados",
   description: "Sim, MEI pode fazer empréstimo. Conheça as principais linhas de crédito disponíveis em 2026, taxas, requisitos e como aumentar suas chances de aprovação.",

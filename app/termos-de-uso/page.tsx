@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Termos de Uso — MEI/guia",
   description: "Termos e condições de uso do site MEI/guia. Leia antes de utilizar nosso conteúdo.",

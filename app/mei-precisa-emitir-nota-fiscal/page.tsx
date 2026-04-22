@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI precisa emitir nota fiscal em 2026? Veja quando é obrigatório",
   description: "Descubra quando o MEI é obrigado a emitir nota fiscal, quais as consequências de não emitir e como funciona para serviços e produtos.",

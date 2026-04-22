@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem, AdSlot } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem, AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "Como emitir o DAS-MEI em 2026 — passo a passo pelo celular ou PC",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="Como emitir o DAS-MEI em 2026 — passo a passo pelo celular ou PC"
+        description="Veja como gerar o boleto DAS do MEI pelo portal Gov.br, pelo app ou pelo banco. Passo a passo atualizado para 2026."
+        url="https://guiamei.com.br/como-emitir-das-mei"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "Posso emitir vários meses de uma vez?", a: "Sim! O sistema PGMEI permite emitir um DAS por vez, mas você pode repetir o processo para cada mês em atraso. Para múltiplos meses atrasados, considere o parcelamento." },
+    { q: "O DAS pago no banco demora para compensar?", a: "Pagamentos via Pix são instantâneos. Boleto bancário pode levar até 2 dias úteis para compensar. Nunca pague no último dia com boleto." },
+    { q: "Como saber se o boleto DAS é verdadeiro?", a: "O DAS só deve ser gerado pelo portal oficial pgmei.gov.br. Qualquer boleto enviado por e-mail ou WhatsApp não solicitado é suspeito." },
+    { q: "Posso configurar o DAS para pagar automaticamente?", a: "Sim, é possível cadastrar débito automático no banco para nunca atrasar o pagamento do DAS." }
+      ]} />
       <PageHero
         badge="DAS-MEI · 2026"
         title="Como emitir o DAS-MEI"

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI ou CLT em 2026? Compare renda líquida e benefícios",
   description: "Compare MEI e CLT em 2026: impostos, direitos trabalhistas, aposentadoria, FGTS, plano de saúde e quando vale a pena migrar de um para o outro.",

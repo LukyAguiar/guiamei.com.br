@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, FaqItem , AdSlot , InternalLink } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Melhor cartão para MEI em 2026: compare taxas e benefícios",
   description: "Compare os melhores cartões de crédito para MEI em 2026: anuidade zero, cashback, limite e requisitos. Escolha o ideal para o seu negócio.",

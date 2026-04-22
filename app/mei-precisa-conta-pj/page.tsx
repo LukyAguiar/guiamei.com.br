@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI precisa de conta PJ em 2026? Veja quando vale a pena",
   description: "MEI não é obrigado por lei a ter conta PJ, mas ter uma traz vantagens importantes. Veja quando vale a pena e as melhores opções gratuitas em 2026.",

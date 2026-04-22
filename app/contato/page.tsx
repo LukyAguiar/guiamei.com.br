@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Contato — MEI/guia",
   description: "Entre em contato com o MEI/guia para dúvidas, sugestões ou reportar informações desatualizadas.",

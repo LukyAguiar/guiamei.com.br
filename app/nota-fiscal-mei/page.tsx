@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, ExternalLink, FaqItem , AdSlot , InternalLink } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, ExternalLink, FaqItem , AdSlot , InternalLink , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "Nota fiscal MEI em 2026: NFS-e e NF-e — quando e como emitir",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="Nota fiscal MEI em 2026: NFS-e e NF-e — quando e como emitir"
+        description="Saiba quando o MEI é obrigado a emitir nota fiscal, como emitir NFS-e e NF-e, e quais portais usar."
+        url="https://guiamei.com.br/nota-fiscal-mei"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "MEI é obrigado a emitir nota fiscal?", a: "Sim, quando vende para outra empresa (CNPJ). Para pessoa física (CPF), a emissão é facultativa, mas pode ser solicitada pelo comprador." },
+    { q: "Qual portal usar para emitir nota fiscal de serviço?", a: "Para serviços, use o portal da prefeitura do seu município. Para mercadorias, acesse o portal da SEFAZ do seu estado." },
+    { q: "Nota fiscal MEI tem custo?", a: "Não. A emissão de nota fiscal pelo MEI é gratuita, tanto pelo portal da prefeitura quanto pelo sistema federal." },
+    { q: "Preciso de certificado digital para emitir nota fiscal MEI?", a: "Em geral, não. A maioria das prefeituras e o sistema federal dispensam o certificado digital para o MEI. Basta login pelo Gov.br." }
+      ]} />
       <PageHero
         badge="Nota Fiscal MEI · 2026"
         title="Como emitir nota fiscal sendo MEI"

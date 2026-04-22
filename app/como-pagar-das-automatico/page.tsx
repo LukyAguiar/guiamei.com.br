@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como pagar o DAS automaticamente em 2026: débito recorrente",
   description: "Configure o débito automático do DAS MEI e nunca mais esqueça de pagar. Veja como habilitar pelo PGMEI e quais bancos aceitam o débito automático.",

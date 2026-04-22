@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI no débito automático em 2026: vantagens e como cadastrar",
   description: "Entenda como funciona o débito automático do DAS MEI, quais bancos aceitam, como ativar e o que fazer se o banco não oferecer a opção.",

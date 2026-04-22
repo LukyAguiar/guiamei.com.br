@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem , AdSlot } from "../components/ui";
+import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem , AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "Como declarar o DASN-SIMEI em 2026: prazo até 31 de maio",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="Como declarar o DASN-SIMEI em 2026: prazo até 31 de maio"
+        description="Aprenda como fazer a declaração anual do MEI (DASN-SIMEI) passo a passo, prazo e o que acontece se não declarar."
+        url="https://guiamei.com.br/como-declarar-dasn-simei"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "Quando é o prazo da DASN-SIMEI em 2026?", a: "O prazo é até 31 de maio de 2026. A declaração é referente ao faturamento do ano anterior (2025)." },
+    { q: "DASN-SIMEI é paga ou gratuita?", a: "É completamente gratuita. Nunca pague por serviços que prometem fazer a declaração do MEI." },
+    { q: "O que acontece se não declarar o DASN-SIMEI?", a: "O CNPJ fica em situação irregular e incide multa mínima de R$ 50,00 por atraso." },
+    { q: "Posso retificar a DASN-SIMEI depois de enviada?", a: "Sim. Você pode enviar uma declaração retificadora pelo mesmo sistema, sem prazo limite." }
+      ]} />
       <PageHero
         badge="DASN-SIMEI · 2026"
         title="Como declarar o DASN-SIMEI"

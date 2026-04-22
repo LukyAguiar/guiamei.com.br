@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "Golpe do DAS MEI e boleto falso em 2026: como identificar e evitar",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="Golpe do DAS MEI e boleto falso em 2026: como identificar e evitar"
+        description="Golpistas enviam cobranças falsas imitando o DAS do MEI. Saiba como identificar boletos fraudulentos e como se proteger."
+        url="https://guiamei.com.br/golpe-das-mei-boleto-falso"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "Como identificar um boleto DAS falso?", a: "O DAS verdadeiro só pode ser gerado pelo site pgmei.gov.br. Qualquer boleto enviado por e-mail ou WhatsApp não solicitado é suspeito." },
+    { q: "Existe taxa para emitir o DAS?", a: "Não. A emissão do DAS é sempre gratuita. Se alguém cobrou para emitir seu DAS, é golpe." },
+    { q: "O que fazer se paguei um DAS falso?", a: "Entre em contato com seu banco imediatamente para contestar a transação e registre um boletim de ocorrência." },
+    { q: "Recebi uma carta cobrando o MEI. É golpe?", a: "Desconfie de cobranças por carta ou e-mail não solicitadas. A Receita Federal não envia cobranças de DAS por correio." }
+      ]} />
       <PageHero
         badge="Segurança · Golpes MEI"
         title="Golpe do DAS MEI: boleto falso"

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI ou autônomo em 2026? Compare custos, benefícios e riscos",
   description: "Entenda as diferenças entre trabalhar como MEI (com CNPJ) e como autônomo sem registro — impostos, direitos, segurança e quando vale a pena formalizar.",

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, StepItem, AlertBox, RelatedPages, InternalLink, ExternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como dar baixa no MEI em 2026: passo a passo gratuito",
   description: "Veja como encerrar o MEI pelo portal Gov.br, o que acontece com as dívidas e quando vale a pena fechar o CNPJ.",

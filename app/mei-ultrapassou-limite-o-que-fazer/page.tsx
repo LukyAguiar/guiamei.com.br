@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI ultrapassou o limite em 2026: o que fazer e como regularizar",
   description: "Ultrapassou o limite de R$ 81.000 do MEI? Saiba o que acontece, as consequências, prazo para regularizar e como migrar para ME no Simples Nacional.",

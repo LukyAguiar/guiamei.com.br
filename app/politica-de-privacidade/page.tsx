@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Política de Privacidade — MEI/guia",
   description: "Saiba como o MEI/guia coleta, usa e protege seus dados pessoais. Política de privacidade completa e transparente.",

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como consultar débitos do MEI em 2026: veja pendências do CNPJ",
   description: "Veja como consultar todos os débitos do seu MEI: DAS em atraso, declarações pendentes e situação do CNPJ — pelo celular ou computador.",

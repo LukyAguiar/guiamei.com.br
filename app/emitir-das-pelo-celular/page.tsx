@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como emitir o DAS MEI pelo celular em 2026: app e site mobile",
   description: "Passo a passo para emitir e pagar o DAS do MEI pelo celular usando o app oficial ou o site mobile — rápido, gratuito e sem computador.",

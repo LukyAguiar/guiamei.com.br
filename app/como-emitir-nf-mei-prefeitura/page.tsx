@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como emitir nota fiscal MEI na prefeitura em 2026: passo a passo",
   description: "Guia completo para emitir NFS-e (nota fiscal de serviços) pela prefeitura sendo MEI: cadastro, login, preenchimento e envio ao cliente.",

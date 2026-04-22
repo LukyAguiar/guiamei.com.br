@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, InternalLink, ExternalLink } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Sobre o MEI/guia — Quem somos e como trabalhamos",
   description: "Conheça o MEI/guia: um site informativo independente criado para ajudar microempreendedores a entender suas obrigações sem complicação.",

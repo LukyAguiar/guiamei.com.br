@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "MEI precisa de contador em 2026? Resposta honesta e definitiva",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="MEI precisa de contador em 2026? Resposta honesta e definitiva"
+        description="Descubra se o MEI é obrigado a ter contador, quando vale a pena contratar e o que pode fazer sozinho."
+        url="https://guiamei.com.br/mei-precisa-de-contador"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "MEI precisa pagar contador?", a: "Não é obrigatório. Toda a burocracia do MEI pode ser feita gratuitamente pelo próprio empreendedor." },
+    { q: "Quando vale a pena contratar um contador sendo MEI?", a: "Quando você está próximo do limite de faturamento, tem funcionário, quer migrar para ME/EPP, ou enfrenta problemas com a Receita Federal." },
+    { q: "Contador pode cobrar pelo cadastro do MEI?", a: "Não. O registro no Portal do Empreendedor é 100% gratuito. Se alguém cobrou, você pode registrar reclamação no Procon." },
+    { q: "Quanto custa um contador para MEI?", a: "Não é obrigatório, mas se contratar, os valores variam entre R$ 100 e R$ 300 mensais dependendo da região e dos serviços incluídos." }
+      ]} />
       <PageHero
         badge="Contador MEI · 2026"
         title="MEI precisa de contador?"

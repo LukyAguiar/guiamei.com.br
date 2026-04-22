@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "Limite do MEI em 2026: R$ 81 mil/ano e o que fazer se ultrapassar",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="Limite do MEI em 2026: R$ 81 mil/ano e o que fazer se ultrapassar"
+        description="Veja o limite de faturamento do MEI em 2026, como calcular o limite proporcional e o que fazer se ultrapassar."
+        url="https://guiamei.com.br/limite-mei-2026"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "Qual é o limite de faturamento do MEI em 2026?", a: "O limite é de R$ 81.000 por ano (ou R$ 6.750 por mês, em média). Para MEI caminhoneiro, o limite é de R$ 251.600/ano." },
+    { q: "O que acontece se ultrapassar o limite do MEI?", a: "Se ultrapassar até 20% (R$ 97.200), você migra para Microempresa (ME) no ano seguinte. Se ultrapassar mais de 20%, a migração é imediata e retroativa a janeiro." },
+    { q: "O limite é proporcional no ano de abertura?", a: "Sim. Se você abriu o MEI em julho, o limite é proporcional: R$ 6.750 × 6 meses = R$ 40.500." },
+    { q: "Posso faturar mais em um mês e menos em outro?", a: "Sim, o que importa é o total anual. O limite de R$ 81.000 é calculado sobre o faturamento bruto acumulado no ano." }
+      ]} />
       <PageHero
         badge="Limites MEI · 2026"
         title="Limite do MEI em 2026"

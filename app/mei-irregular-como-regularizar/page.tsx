@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "MEI irregular em 2026: como consultar e regularizar o CNPJ",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="MEI irregular em 2026: como consultar e regularizar o CNPJ"
+        description="Veja como consultar pendências do MEI, o que causa irregularidade e como regularizar o CNPJ passo a passo."
+        url="https://guiamei.com.br/mei-irregular-como-regularizar"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "Como saber se meu MEI está irregular?", a: "Acesse o portal da Receita Federal em receita.fazenda.gov.br e consulte a situação cadastral pelo CNPJ." },
+    { q: "O que causa irregularidade no MEI?", a: "Débitos de DAS em aberto, DASN-SIMEI não declarada ou dados cadastrais desatualizados são as causas mais comuns." },
+    { q: "MEI irregular perde o CNPJ?", a: "Após 12 meses de inadimplência consecutiva, o CNPJ pode ser cancelado automaticamente pela Receita Federal." },
+    { q: "Quanto tempo leva para regularizar o MEI?", a: "O pagamento de débitos via Pix é reconhecido em até 2 dias úteis. A regularização da situação cadastral pode levar alguns dias adicionais." }
+      ]} />
       <PageHero
         badge="Regularização MEI · 2026"
         title="MEI irregular: como regularizar"

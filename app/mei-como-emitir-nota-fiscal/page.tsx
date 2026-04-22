@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem, StepItem, ExternalLink , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Como emitir nota fiscal sendo MEI em 2026: passo a passo",
   description: "Aprenda como emitir nota fiscal sendo MEI em 2026: NFS-e pela prefeitura, NF-e para indústria e quando você é obrigado a emitir.",

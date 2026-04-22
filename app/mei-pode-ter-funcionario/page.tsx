@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageHero, AlertBox, RelatedPages, FaqItem , AdSlot , InternalLink } from "../components/ui";
+import { PageHero, AlertBox, RelatedPages, FaqItem , AdSlot , InternalLink , ArticleSchema, FaqSchema } from "../components/ui";
+
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "MEI pode ter funcionário em 2026? Limite, encargos e obrigações",
@@ -10,6 +13,18 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main>
+      <ArticleSchema
+        title="MEI pode ter funcionário em 2026? Limite, encargos e obrigações"
+        description="Veja quantos funcionários o MEI pode ter, quais encargos paga e quais são as obrigações trabalhistas."
+        url="https://guiamei.com.br/mei-pode-ter-funcionario"
+        dateModified="2026-04-21"
+      />
+      <FaqSchema items={[
+        { q: "Quantos funcionários o MEI pode ter?", a: "O MEI pode ter apenas 1 funcionário contratado com carteira assinada, recebendo o salário mínimo ou o piso da categoria." },
+    { q: "Quais encargos o MEI paga com funcionário?", a: "O MEI paga 8% de FGTS mais 3% de INSS patronal sobre o salário do empregado." },
+    { q: "MEI com funcionário precisa de eSocial?", a: "Sim. O MEI empregador deve registrar o empregado no eSocial, dependendo da natureza do trabalho." },
+    { q: "O que acontece se o MEI tiver mais de 1 funcionário?", a: "Isso descaracteriza o MEI e pode forçar migração para ME ou EPP, com carga tributária maior." }
+      ]} />
       <PageHero
         badge="Funcionário MEI · 2026"
         title="MEI pode ter funcionário?"

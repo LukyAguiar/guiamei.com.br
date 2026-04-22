@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { PageHero, AlertBox, RelatedPages, InternalLink, FaqItem , AdSlot } from "../components/ui";
 
+// ISR — revalida a página a cada 24h sem rebuild
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "MEI inapto: o que significa e como regularizar em 2026",
   description: "CNPJ do MEI com situação 'inapto'? Entenda o que significa, por que acontece, quais as consequências e como regularizar em 2026.",
