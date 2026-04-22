@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Termos de Uso — MEI/guia",
   description: "Termos e condições de uso do site MEI/guia. Leia antes de utilizar nosso conteúdo.",
-  alternates: { canonical: "https://guiamei.com.br/termos-de-uso" },
+  alternates: { canonical: "https://guiamei.vercel.app/termos-de-uso" },
 };
 
 export default function Page() {
@@ -28,7 +28,7 @@ export default function Page() {
         <section>
           <h2 className="font-serif text-xl text-[var(--ink)] mb-3">1. Aceitação dos termos</h2>
           <p>
-            Ao acessar e utilizar o site <strong className="text-[var(--ink)]">guiamei.com.br</strong> ("MEI/guia"),
+            Ao acessar e utilizar o site <strong className="text-[var(--ink)]">guiamei.vercel.app</strong> ("MEI/guia"),
             você concorda com estes Termos de Uso. Se não concordar com alguma condição, pedimos que não utilize o site.
           </p>
         </section>

@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI precisa de contador em 2026? Resposta honesta e definitiva",
   description: "Descubra se o MEI é obrigado a contratar contador, quando vale a pena e o que você pode fazer sozinho. Resposta direta e sem enrolação.",
-  alternates: { canonical: "https://guiamei.com.br/mei-precisa-de-contador" }
+  alternates: { canonical: "https://guiamei.vercel.app/mei-precisa-de-contador" }
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="MEI precisa de contador em 2026? Resposta honesta e definitiva"
         description="Descubra se o MEI é obrigado a ter contador, quando vale a pena contratar e o que pode fazer sozinho."
-        url="https://guiamei.com.br/mei-precisa-de-contador"
+        url="https://guiamei.vercel.app/mei-precisa-de-contador"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

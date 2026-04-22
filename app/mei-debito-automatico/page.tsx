@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI no débito automático em 2026: vantagens e como cadastrar",
   description: "Entenda como funciona o débito automático do DAS MEI, quais bancos aceitam, como ativar e o que fazer se o banco não oferecer a opção.",
-  alternates: { canonical: "https://guiamei.com.br/mei-debito-automatico" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-debito-automatico" },
 };
 
 export default function Page() {

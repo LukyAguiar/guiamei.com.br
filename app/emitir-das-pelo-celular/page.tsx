@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como emitir o DAS MEI pelo celular em 2026: app e site mobile",
   description: "Passo a passo para emitir e pagar o DAS do MEI pelo celular usando o app oficial ou o site mobile — rápido, gratuito e sem computador.",
-  alternates: { canonical: "https://guiamei.com.br/emitir-das-pelo-celular" },
+  alternates: { canonical: "https://guiamei.vercel.app/emitir-das-pelo-celular" },
 };
 
 export default function Page() {

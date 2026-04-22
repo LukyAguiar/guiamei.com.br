@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI inapto: o que significa e como regularizar em 2026",
   description: "CNPJ do MEI com situação 'inapto'? Entenda o que significa, por que acontece, quais as consequências e como regularizar em 2026.",
-  alternates: { canonical: "https://guiamei.com.br/mei-inapto-o-que-significa" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-inapto-o-que-significa" },
 };
 
 export default function Page() {

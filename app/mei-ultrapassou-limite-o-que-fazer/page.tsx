@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI ultrapassou o limite em 2026: o que fazer e como regularizar",
   description: "Ultrapassou o limite de R$ 81.000 do MEI? Saiba o que acontece, as consequências, prazo para regularizar e como migrar para ME no Simples Nacional.",
-  alternates: { canonical: "https://guiamei.com.br/mei-ultrapassou-limite-o-que-fazer" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-ultrapassou-limite-o-que-fazer" },
 };
 
 export default function Page() {

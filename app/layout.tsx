@@ -13,8 +13,8 @@ const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: { default: "MEI/guia — Guia completo do MEI 2026", template: "%s | MEI/guia" },
   description: "Guia completo e atualizado sobre MEI em 2026: como pagar o DAS, declarar o DASN-SIMEI, emitir nota fiscal e muito mais.",
-  metadataBase: new URL("https://guiamei.com.br"),
-  alternates: { canonical: "https://guiamei.com.br" },
+  metadataBase: new URL("https://guiamei.vercel.app"),
+  alternates: { canonical: "https://guiamei.vercel.app" },
   openGraph: {
     siteName: "MEI/guia",
     locale: "pt_BR",

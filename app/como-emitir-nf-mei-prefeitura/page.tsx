@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como emitir nota fiscal MEI na prefeitura em 2026: passo a passo",
   description: "Guia completo para emitir NFS-e (nota fiscal de serviços) pela prefeitura sendo MEI: cadastro, login, preenchimento e envio ao cliente.",
-  alternates: { canonical: "https://guiamei.com.br/como-emitir-nf-mei-prefeitura" },
+  alternates: { canonical: "https://guiamei.vercel.app/como-emitir-nf-mei-prefeitura" },
 };
 
 export default function Page() {

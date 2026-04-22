@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como pagar o DAS automaticamente em 2026: débito recorrente",
   description: "Configure o débito automático do DAS MEI e nunca mais esqueça de pagar. Veja como habilitar pelo PGMEI e quais bancos aceitam o débito automático.",
-  alternates: { canonical: "https://guiamei.com.br/como-pagar-das-automatico" },
+  alternates: { canonical: "https://guiamei.vercel.app/como-pagar-das-automatico" },
 };
 
 export default function Page() {

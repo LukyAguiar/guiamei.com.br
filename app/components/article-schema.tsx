@@ -28,15 +28,15 @@ export function ArticleSchema({
     author: {
       "@type": "Organization",
       name: "MEI/guia",
-      url: "https://guiamei.com.br",
+      url: "https://guiamei.vercel.app",
     },
     publisher: {
       "@type": "Organization",
       name: "MEI/guia",
-      url: "https://guiamei.com.br",
+      url: "https://guiamei.vercel.app",
       logo: {
         "@type": "ImageObject",
-        url: "https://guiamei.com.br/apple-touch-icon-2.png",
+        url: "https://guiamei.vercel.app/apple-touch-icon-2.png",
       },
     },
     mainEntityOfPage: {

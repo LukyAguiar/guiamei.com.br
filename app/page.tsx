@@ -5,11 +5,11 @@ import { Badge, ExternalLink, InternalLink, AlertBox, FaqItem } from "./componen
 export const metadata: Metadata = {
   title: "Guia Completo do MEI 2026 — tudo o que você precisa saber",
   description: "O guia mais completo sobre MEI em 2026: como pagar o DAS, declarar o DASN-SIMEI, emitir nota fiscal, limites, funcionários e muito mais.",
-  alternates: { canonical: "https://guiamei.com.br" },
+  alternates: { canonical: "https://guiamei.vercel.app" },
   openGraph: {
     title: "Guia Completo do MEI 2026",
     description: "Tudo sobre MEI em 2026: DAS, DASN-SIMEI, nota fiscal, limites e obrigações. Gratuito e atualizado.",
-    url: "https://guiamei.com.br",
+    url: "https://guiamei.vercel.app",
     siteName: "MEI/guia",
     locale: "pt_BR",
     type: "website",

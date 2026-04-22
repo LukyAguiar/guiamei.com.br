@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como dar baixa no MEI em 2026: passo a passo gratuito",
   description: "Veja como encerrar o MEI pelo portal Gov.br, o que acontece com as dívidas e quando vale a pena fechar o CNPJ.",
-  alternates: { canonical: "https://guiamei.com.br/como-dar-baixa-no-mei" }
+  alternates: { canonical: "https://guiamei.vercel.app/como-dar-baixa-no-mei" }
 };
 
 export default function Page() {

@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como declarar o DASN-SIMEI em 2026: prazo até 31 de maio",
   description: "Aprenda como fazer a declaração anual do MEI (DASN-SIMEI), prazo, o que declarar e como corrigir erros. Guia atualizado 2026.",
-  alternates: { canonical: "https://guiamei.com.br/como-declarar-dasn-simei" }
+  alternates: { canonical: "https://guiamei.vercel.app/como-declarar-dasn-simei" }
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="Como declarar o DASN-SIMEI em 2026: prazo até 31 de maio"
         description="Aprenda como fazer a declaração anual do MEI (DASN-SIMEI) passo a passo, prazo e o que acontece se não declarar."
-        url="https://guiamei.com.br/como-declarar-dasn-simei"
+        url="https://guiamei.vercel.app/como-declarar-dasn-simei"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

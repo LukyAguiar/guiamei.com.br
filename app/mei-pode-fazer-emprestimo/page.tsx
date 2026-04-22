@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI pode fazer empréstimo em 2026? Veja requisitos e cuidados",
   description: "Sim, MEI pode fazer empréstimo. Conheça as principais linhas de crédito disponíveis em 2026, taxas, requisitos e como aumentar suas chances de aprovação.",
-  alternates: { canonical: "https://guiamei.com.br/mei-pode-fazer-emprestimo" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-pode-fazer-emprestimo" },
 };
 
 export default function Page() {

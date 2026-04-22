@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI precisa de conta PJ em 2026? Veja quando vale a pena",
   description: "MEI não é obrigado por lei a ter conta PJ, mas ter uma traz vantagens importantes. Veja quando vale a pena e as melhores opções gratuitas em 2026.",
-  alternates: { canonical: "https://guiamei.com.br/mei-precisa-conta-pj" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-precisa-conta-pj" },
 };
 
 export default function Page() {

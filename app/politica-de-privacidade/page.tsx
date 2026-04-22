@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Política de Privacidade — MEI/guia",
   description: "Saiba como o MEI/guia coleta, usa e protege seus dados pessoais. Política de privacidade completa e transparente.",
-  alternates: { canonical: "https://guiamei.com.br/politica-de-privacidade" },
+  alternates: { canonical: "https://guiamei.vercel.app/politica-de-privacidade" },
 };
 
 export default function Page() {
@@ -28,7 +28,7 @@ export default function Page() {
         <section>
           <h2 className="font-serif text-xl text-[var(--ink)] mb-3">1. Quem somos</h2>
           <p>
-            O <strong className="text-[var(--ink)]">MEI/guia</strong> (<strong>guiamei.com.br</strong>) é um site informativo independente
+            O <strong className="text-[var(--ink)]">MEI/guia</strong> (<strong>guiamei.vercel.app</strong>) é um site informativo independente
             sobre o Microempreendedor Individual (MEI) no Brasil. Não somos afiliados à Receita Federal, ao Governo Federal
             ou a qualquer órgão público.
           </p>

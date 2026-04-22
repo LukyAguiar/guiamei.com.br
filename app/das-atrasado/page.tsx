@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "DAS MEI atrasado em 2026: multa, juros e como parcelar em até 60x",
   description: "Saiba o que acontece quando o DAS do MEI fica em atraso, como calcular multa e juros, como parcelar e como regularizar seu CNPJ.",
-  alternates: { canonical: "https://guiamei.com.br/das-atrasado" },
+  alternates: { canonical: "https://guiamei.vercel.app/das-atrasado" },
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="DAS MEI atrasado em 2026: multa, juros e como parcelar em até 60x"
         description="Saiba o que acontece quando o DAS do MEI fica em atraso, como calcular multa e juros, como parcelar e como regularizar seu CNPJ."
-        url="https://guiamei.com.br/das-atrasado"
+        url="https://guiamei.vercel.app/das-atrasado"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

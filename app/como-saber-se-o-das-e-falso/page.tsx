@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como saber se o DAS é falso em 2026: 5 sinais de golpe",
   description: "Aprenda a verificar se um boleto DAS do MEI é legítimo ou falso em menos de 1 minuto, com o código de barras e o portal oficial.",
-  alternates: { canonical: "https://guiamei.com.br/como-saber-se-o-das-e-falso" },
+  alternates: { canonical: "https://guiamei.vercel.app/como-saber-se-o-das-e-falso" },
 };
 
 export default function Page() {

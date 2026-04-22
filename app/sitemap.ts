@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://guiamei.com.br';
+  const baseUrl = 'https://guiamei.vercel.app';
 
   return [
     // ── Institucional ──────────────────────────────────────────────────────────

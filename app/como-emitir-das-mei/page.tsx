@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como emitir o DAS-MEI em 2026 — passo a passo pelo celular ou PC",
   description: "Veja como gerar o boleto DAS do MEI pelo portal Gov.br, pelo app ou pelo banco. Passo a passo atualizado para 2026.",
-  alternates: { canonical: "https://guiamei.com.br/como-emitir-das-mei" },
+  alternates: { canonical: "https://guiamei.vercel.app/como-emitir-das-mei" },
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="Como emitir o DAS-MEI em 2026 — passo a passo pelo celular ou PC"
         description="Veja como gerar o boleto DAS do MEI pelo portal Gov.br, pelo app ou pelo banco. Passo a passo atualizado para 2026."
-        url="https://guiamei.com.br/como-emitir-das-mei"
+        url="https://guiamei.vercel.app/como-emitir-das-mei"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI tem direito a crédito em 2026? Veja linhas e como acessar",
   description: "Descubra todos os direitos de crédito do MEI: empréstimos, FGTS, aposentadoria, auxílio-doença, licença-maternidade e financiamentos em 2026.",
-  alternates: { canonical: "https://guiamei.com.br/mei-tem-direito-credito" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-tem-direito-credito" },
 };
 
 export default function Page() {

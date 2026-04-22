@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Melhores contas para MEI em 2026: compare gratuitas e pagas",
   description: "Compare as melhores contas PJ para MEI em 2026: Nubank, Inter, Mercado Pago e outras. Sem anuidade, abertura pelo celular e recursos para empreendedores.",
-  alternates: { canonical: "https://guiamei.com.br/melhores-contas-para-mei" },
+  alternates: { canonical: "https://guiamei.vercel.app/melhores-contas-para-mei" },
 };
 
 export default function Page() {

@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Golpe do DAS MEI e boleto falso em 2026: como identificar e evitar",
   description: "Golpistas enviam cobranças falsas imitando o DAS do MEI. Saiba como identificar boletos fraudulentos, onde denunciar e como se proteger.",
-  alternates: { canonical: "https://guiamei.com.br/golpe-das-mei-boleto-falso" },
+  alternates: { canonical: "https://guiamei.vercel.app/golpe-das-mei-boleto-falso" },
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="Golpe do DAS MEI e boleto falso em 2026: como identificar e evitar"
         description="Golpistas enviam cobranças falsas imitando o DAS do MEI. Saiba como identificar boletos fraudulentos e como se proteger."
-        url="https://guiamei.com.br/golpe-das-mei-boleto-falso"
+        url="https://guiamei.vercel.app/golpe-das-mei-boleto-falso"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

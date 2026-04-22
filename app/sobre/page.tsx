@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Sobre o MEI/guia — Quem somos e como trabalhamos",
   description: "Conheça o MEI/guia: um site informativo independente criado para ajudar microempreendedores a entender suas obrigações sem complicação.",
-  alternates: { canonical: "https://guiamei.com.br/sobre" },
+  alternates: { canonical: "https://guiamei.vercel.app/sobre" },
 };
 
 export default function Page() {

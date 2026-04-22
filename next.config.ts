@@ -36,16 +36,8 @@ const nextConfig: NextConfig = {
   },
 
   // ── Redirects ────────────────────────────────────────────────────────────────
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "guiamei.vercel.app" }],
-        destination: "https://guiamei.com.br/:path*",
-        permanent: true,
-      },
-    ];
-  },
+  // Nenhum redirect de domínio necessário — o site roda em guiamei.vercel.app.
+  // Se no futuro tiver domínio customizado, adicione o redirect aqui.
 };
 
 export default nextConfig;

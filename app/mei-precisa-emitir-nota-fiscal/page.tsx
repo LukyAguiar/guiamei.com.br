@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI precisa emitir nota fiscal em 2026? Veja quando é obrigatório",
   description: "Descubra quando o MEI é obrigado a emitir nota fiscal, quais as consequências de não emitir e como funciona para serviços e produtos.",
-  alternates: { canonical: "https://guiamei.com.br/mei-precisa-emitir-nota-fiscal" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-precisa-emitir-nota-fiscal" },
 };
 
 export default function Page() {

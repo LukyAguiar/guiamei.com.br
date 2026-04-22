@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "O que acontece se o MEI não pagar o DAS em 2026? Consequências",
   description: "Veja o que acontece quando o MEI não paga o DAS: multas, perda do INSS, cancelamento do CNPJ e como regularizar.",
-  alternates: { canonical: "https://guiamei.com.br/o-que-acontece-se-nao-pagar" }
+  alternates: { canonical: "https://guiamei.vercel.app/o-que-acontece-se-nao-pagar" }
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="O que acontece se o MEI não pagar o DAS em 2026? Consequências"
         description="Veja o que acontece quando o MEI não paga o DAS: multas, perda do INSS, cancelamento do CNPJ e como regularizar."
-        url="https://guiamei.com.br/o-que-acontece-se-nao-pagar"
+        url="https://guiamei.vercel.app/o-que-acontece-se-nao-pagar"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

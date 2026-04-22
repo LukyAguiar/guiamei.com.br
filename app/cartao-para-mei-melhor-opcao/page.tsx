@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Melhor cartão para MEI em 2026: compare taxas e benefícios",
   description: "Compare os melhores cartões de crédito para MEI em 2026: anuidade zero, cashback, limite e requisitos. Escolha o ideal para o seu negócio.",
-  alternates: { canonical: "https://guiamei.com.br/cartao-para-mei-melhor-opcao" },
+  alternates: { canonical: "https://guiamei.vercel.app/cartao-para-mei-melhor-opcao" },
 };
 
 export default function Page() {

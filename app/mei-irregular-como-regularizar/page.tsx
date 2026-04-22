@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI irregular em 2026: como consultar e regularizar o CNPJ",
   description: "MEI com débitos, declarações atrasadas ou CNPJ inapto? Veja o passo a passo para regularizar sua situação e evitar o cancelamento do CNPJ.",
-  alternates: { canonical: "https://guiamei.com.br/mei-irregular-como-regularizar" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-irregular-como-regularizar" },
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="MEI irregular em 2026: como consultar e regularizar o CNPJ"
         description="Veja como consultar pendências do MEI, o que causa irregularidade e como regularizar o CNPJ passo a passo."
-        url="https://guiamei.com.br/mei-irregular-como-regularizar"
+        url="https://guiamei.vercel.app/mei-irregular-como-regularizar"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

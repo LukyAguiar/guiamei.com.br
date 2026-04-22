@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como emitir nota fiscal sendo MEI em 2026: passo a passo",
   description: "Aprenda como emitir nota fiscal sendo MEI em 2026: NFS-e pela prefeitura, NF-e para indústria e quando você é obrigado a emitir.",
-  alternates: { canonical: "https://guiamei.com.br/mei-como-emitir-nota-fiscal" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-como-emitir-nota-fiscal" },
 };
 
 export default function Page() {

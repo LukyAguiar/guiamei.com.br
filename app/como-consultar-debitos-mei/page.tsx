@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como consultar débitos do MEI em 2026: veja pendências do CNPJ",
   description: "Veja como consultar todos os débitos do seu MEI: DAS em atraso, declarações pendentes e situação do CNPJ — pelo celular ou computador.",
-  alternates: { canonical: "https://guiamei.com.br/como-consultar-debitos-mei" },
+  alternates: { canonical: "https://guiamei.vercel.app/como-consultar-debitos-mei" },
 };
 
 export default function Page() {

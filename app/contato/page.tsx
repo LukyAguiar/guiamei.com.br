@@ -6,7 +6,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Contato — MEI/guia",
   description: "Entre em contato com o MEI/guia para dúvidas, sugestões ou reportar informações desatualizadas.",
-  alternates: { canonical: "https://guiamei.com.br/contato" },
+  alternates: { canonical: "https://guiamei.vercel.app/contato" },
 };
 
 export default function Page() {

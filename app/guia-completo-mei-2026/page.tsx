@@ -8,7 +8,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Guia completo do MEI 2026: tudo sobre DAS, nota fiscal e obrigações",
   description: "O guia mais completo sobre MEI em 2026: DAS, DASN-SIMEI, nota fiscal, limites, funcionários, direitos previdenciários, crédito e muito mais.",
-  alternates: { canonical: "https://guiamei.com.br/guia-completo-mei-2026" },
+  alternates: { canonical: "https://guiamei.vercel.app/guia-completo-mei-2026" },
 };
 
 const secoes = [

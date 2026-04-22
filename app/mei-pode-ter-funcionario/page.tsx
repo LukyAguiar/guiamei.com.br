@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI pode ter funcionário em 2026? Limite, encargos e obrigações",
   description: "Saiba se o MEI pode contratar funcionário, quantos pode ter, quanto paga de encargos e quais são as obrigações trabalhistas.",
-  alternates: { canonical: "https://guiamei.com.br/mei-pode-ter-funcionario" }
+  alternates: { canonical: "https://guiamei.vercel.app/mei-pode-ter-funcionario" }
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="MEI pode ter funcionário em 2026? Limite, encargos e obrigações"
         description="Veja quantos funcionários o MEI pode ter, quais encargos paga e quais são as obrigações trabalhistas."
-        url="https://guiamei.com.br/mei-pode-ter-funcionario"
+        url="https://guiamei.vercel.app/mei-pode-ter-funcionario"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

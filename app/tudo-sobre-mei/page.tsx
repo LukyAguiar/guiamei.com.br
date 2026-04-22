@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Tudo sobre MEI em 2026: guia definitivo do zero ao avançado",
   description: "Tudo que você precisa saber sobre o MEI em 2026: o que é, como abrir, obrigações, direitos, limites, benefícios e como fechar o CNPJ.",
-  alternates: { canonical: "https://guiamei.com.br/tudo-sobre-mei" },
+  alternates: { canonical: "https://guiamei.vercel.app/tudo-sobre-mei" },
 };
 
 export default function Page() {

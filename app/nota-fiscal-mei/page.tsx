@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Nota fiscal MEI em 2026: NFS-e e NF-e — quando e como emitir",
   description: "Saiba quando o MEI é obrigado a emitir nota fiscal, como emitir NFS-e pelo portal nacional e NF-e pelo estado. Guia atualizado 2026.",
-  alternates: { canonical: "https://guiamei.com.br/nota-fiscal-mei" }
+  alternates: { canonical: "https://guiamei.vercel.app/nota-fiscal-mei" }
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="Nota fiscal MEI em 2026: NFS-e e NF-e — quando e como emitir"
         description="Saiba quando o MEI é obrigado a emitir nota fiscal, como emitir NFS-e e NF-e, e quais portais usar."
-        url="https://guiamei.com.br/nota-fiscal-mei"
+        url="https://guiamei.vercel.app/nota-fiscal-mei"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

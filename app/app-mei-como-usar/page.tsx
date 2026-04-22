@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Como usar o App MEI em 2026: passo a passo completo",
   description: "Aprenda a usar o aplicativo MEI da Receita Federal: emitir DAS, consultar situação, declarar DASN-SIMEI e muito mais pelo celular.",
-  alternates: { canonical: "https://guiamei.com.br/app-mei-como-usar" },
+  alternates: { canonical: "https://guiamei.vercel.app/app-mei-como-usar" },
 };
 
 export default function Page() {

@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Limite do MEI em 2026: R$ 81 mil/ano e o que fazer se ultrapassar",
   description: "Veja o limite de faturamento do MEI em 2026, o que acontece se ultrapassar, limites de funcionários e de atividades permitidas.",
-  alternates: { canonical: "https://guiamei.com.br/limite-mei-2026" }
+  alternates: { canonical: "https://guiamei.vercel.app/limite-mei-2026" }
 };
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
       <ArticleSchema
         title="Limite do MEI em 2026: R$ 81 mil/ano e o que fazer se ultrapassar"
         description="Veja o limite de faturamento do MEI em 2026, como calcular o limite proporcional e o que fazer se ultrapassar."
-        url="https://guiamei.com.br/limite-mei-2026"
+        url="https://guiamei.vercel.app/limite-mei-2026"
         dateModified="2026-04-21"
       />
       <FaqSchema items={[

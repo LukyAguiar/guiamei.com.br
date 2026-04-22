@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI ou autônomo em 2026? Compare custos, benefícios e riscos",
   description: "Entenda as diferenças entre trabalhar como MEI (com CNPJ) e como autônomo sem registro — impostos, direitos, segurança e quando vale a pena formalizar.",
-  alternates: { canonical: "https://guiamei.com.br/mei-ou-autonomo" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-ou-autonomo" },
 };
 
 export default function Page() {

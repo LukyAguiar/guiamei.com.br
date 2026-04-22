@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "MEI ou CLT em 2026? Compare renda líquida e benefícios",
   description: "Compare MEI e CLT em 2026: impostos, direitos trabalhistas, aposentadoria, FGTS, plano de saúde e quando vale a pena migrar de um para o outro.",
-  alternates: { canonical: "https://guiamei.com.br/mei-ou-clt" },
+  alternates: { canonical: "https://guiamei.vercel.app/mei-ou-clt" },
 };
 
 export default function Page() {

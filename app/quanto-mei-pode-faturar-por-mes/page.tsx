@@ -7,7 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Quanto o MEI pode faturar por mês em 2026? Cálculo e limite",
   description: "O MEI pode faturar até R$ 81.000 por ano — equivalente a R$ 6.750 por mês. Entenda como funciona o limite proporcional e o que fazer se ultrapassar.",
-  alternates: { canonical: "https://guiamei.com.br/quanto-mei-pode-faturar-por-mes" },
+  alternates: { canonical: "https://guiamei.vercel.app/quanto-mei-pode-faturar-por-mes" },
 };
 
 export default function Page() {
