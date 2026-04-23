@@ -106,7 +106,7 @@ export default function Page() {
           <p className="font-semibold mb-2">🔗 Veja também</p>
           <ul className="space-y-1 text-sm">
             <li>→ <InternalLink href="/das-atrasado">DAS atrasado: como regularizar</InternalLink></li>
-            <li>→ <InternalLink href="/calculadora-das-mei">Calculadora DAS MEI</InternalLink></li>
+            <li>→ <InternalLink href="/calculadora-das-mei-atrasado">Calculadora DAS MEI</InternalLink></li>
             <li>→ <InternalLink href="/mei-irregular-como-regularizar">MEI irregular: como regularizar</InternalLink></li>
             <li>→ <InternalLink href="/como-consultar-debitos-mei">Como consultar débitos do MEI</InternalLink></li>
             <li>→ <InternalLink href="/mei-inapto-o-que-significa">MEI inapto: o que significa</InternalLink></li>

@@ -236,7 +236,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ── Calculadoras ───────────────────────────────────────────────────────────
     {
-      url: `${baseUrl}/calculadora-das-mei`,
+      url: `${baseUrl}/calculadora-das-mei-atrasado`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,

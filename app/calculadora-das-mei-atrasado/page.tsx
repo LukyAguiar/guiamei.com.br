@@ -207,7 +207,7 @@ export default function Page() {
 
       </div>
 
-      <RelatedPages current="/calculadora-das-mei" />
+      <RelatedPages current="/calculadora-das-mei-atrasado" />
     </main>
   );
 }
